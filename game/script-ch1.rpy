@@ -464,7 +464,7 @@ label ch1_main:
     
     "Now it's just me and Monika in the room."
     "Oh boy... I have no real idea of what I'm going to say."
-    m "So, how goes your first day of knowing nothing is real?"
+    m "So, how goes your second day of knowing nothing is real?"
     
     
     scene bg residential_day
