@@ -67,7 +67,7 @@ label ch40_main:
     s "I'm right here safe and sound."
     mc "Yeah..."
     s "Besides, I'm not going to kill myself over something like that."
-    s "This isn't some kind of over dramatic soap opera."
+    s "This isn't some kind of soap opera."
     s "You can have more faith in me than that."
     mc "I know."
     "This is just some weird dating sim type game."
@@ -164,33 +164,33 @@ label ch40_main:
     y 3s "It's nice to meet you too, [player]."
     mc "So, do you usually eat out here in the hallway?"
     y 3g "Umm, sometimes."
-    y "It's usually nice and quite out here, which makes it easier to read."
+    y "It's usually nice and quiet out here, which makes it easier to read."
     mc "Oh, sorry, I hope I'm not taking away from your reading time."
     y 3t "No, you're fine."
     y "I actually just finished my book, so I'll probably just focus on eating for the rest of lunch."
     mc "Would you mind if I joined you?"
     y 3p "Huh!?"
     y "You... want to eat with me?"
-    mc "Sure, if you don't mind. Though, I don't want to take away from your quite time."
-    y 3v "The peace and quite is nice, though I suppose it can get a bit lonely..."
+    mc "Sure, if you don't mind. Though, I don't want to take away from your quiet time."
+    y 3v "The peace and quiet is nice, though I suppose it can get a bit lonely..."
     mc "I usually just eat by myself too."
     mc "So, why not be lonely together, huh?"
     y 4c "Umm... I guess that would be okay."
     "I went and grabbed my lunch, and took a seat next to Yuri."
     y 2u "..."
-    "We mostly just made small talk, otherwise it was a pretty quite lunch."
+    "We mostly just made small talk, otherwise it was a pretty quiet lunch."
     "It was a bit awkward to be honest..."
     "Soon, lunch came to an end."
     mc "Well, this was nice."
     y "Was it? I know I didn't have much to say. Sorry..."
-    mc "Nah, you're fine. Sure, it was quite, but it was still nice."
+    mc "Nah, you're fine. Sure, it was quiet, but it was still nice."
     mc "Certainly better than eating alone."
     y 3v "..."
     mc "We should do this again."
     y 3n "Huh? But, why?"
     y 4b "I know I made very poor company..."
     mc "I mean, I know we didn't have much to say, but I still enjoyed eating with you."
-    mc "Quite or not, you made good company, trust me."
+    mc "Quiet or not, you made good company, trust me."
     y 4a "...okay."
     mc "I'll see you later, Yuri."
     stop music fadeout 2.0
@@ -325,8 +325,6 @@ label ch40_main:
     
     
     call ch1_main
-    
-    
     
     
     $ if all(clear for clear in persistent.clear): persistent.clearall = True
