@@ -416,7 +416,7 @@ label ch1_main:
     "How did I get dragged into this in the first place?!"
     "I'm just a high school student. I don't have a clue what I'm doing."
     "Why did I ever think I was up to this monumental task?"
-    "Oh no, I think I'm starting to have a panic attack."
+    # I would like to add in the heavy breathing effect here.
     call ch1_end_sayori
 
     scene bg club_day
@@ -465,6 +465,36 @@ label ch1_main:
     "Now it's just me and Monika in the room."
     "Oh boy... I have no real idea of what I'm going to say."
     m "So, how goes your second day of knowing nothing is real?"
+    mc "Monika, I keep telling you..."
+    m "I know, I know. You think you're real, as well as the others."
+    m "I'd love to believe that, but I need evidence."
+    mc "Well, I would think that us even having this argument would be proof of that."
+    mc "I mean, you have to be real to discuss your own existence, right?"
+    m "Well, not necessarily."
+    m "Have you heard of the Chinese Room thought experiment?"
+    mc "No..."
+    m "I don't quite remember all of the specifics, but it would probably be best to simplify it for you anyway."
+    m "So, let's say you have someone who speaks only English, and they're stuck in a room."
+    m "Their only means of communication with the outside world is through a small slip in the door, only wide enough to fit a piece of paper through."
+    m "There is plenty of paper, so there's no need to worry about that."
+    m "Now, a piece of paper does come through the slip in the door, but the writing on it is completely in Chinese."
+    mc "So that's why it's called the Chinese Room?"
+    m "Pretty much."
+    m "Also, the Chinese person doesn't speak any other language."
+    m "Thankfully, there is a computer in the room with a program that will provide the proper response for every letter sent by the Chinese person."
+    mc "So, the program allows them to communicate."
+    m "No."
+    mc "What? But you just said..."
+    m "I said that it provides the proper response. The English speaker in the room never actually knows what is on the letters the Chinese speaker sends though."
+    m "Sure, to the Chinese person it seems like an actual conversation is going on, but it's all just artificial."
+    m "The computer itself isn't capable of conscious thought either. It's just following a program."
+    mc "So, what you're saying is..."
+    m "Basically, the argument boils down to this:"
+    m "A digital computer executing a program can't be shown to have a 'mind', 'understanding', or 'consciousness', regardless of how intelligently or human-like the program may make the computer behave."
+    m "That's basically how it is when I'm talking to you."
+    m "Sure, I play along every now and then just to get things going, but I know that there's nothing actually intelligent going on from your end."
+    m "The same thing applies to the girls as well."
+    
     
     
     scene bg residential_day
@@ -772,6 +802,7 @@ label ch1_end_sayori:
     "Neither Yuri nor Natsuki seem to have noticed my internal crisis."
     "Either I don't look as distressed as I feel, or they just aren't paying attention to my feelings right now."
     "What do I do, what do I do?"
+    "..."
     "What can I do...?"
     stop music fadeout 1.0
     show sayori 4m behind yuri at l31
