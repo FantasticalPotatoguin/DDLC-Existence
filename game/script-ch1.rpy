@@ -599,7 +599,7 @@ label ch1_main:
     mc "You don't know Sayori, and you sure as hell don't know me!"
     mc "And of course nothing has changed yet, it's just been two days!"
     mc "Oh, but if you want change so bad, then I'll give you change. I'll change the whole fucking script if I have to."
-    m "You know, that type of language really isn't good for professional debate."
+    m "You know, that type of language really isn't good for a professional debate."
     mc "Oh, screw you Monika. I can't believe I ever thought highly of you."
     mc "You're nothing more than a selfish monster, and you deserve to be alone."
     m "..."
@@ -615,8 +615,19 @@ label ch1_main:
     "I tried to relax and write my poem for tomorrow, but it was hard to really focus."
     "I just can't believe that anyone would do such horrible things."
     "Was she really that desperate? Or did she just not care what got in her way, others be damned?"
+    "Losing my cool like that was stupid. Who knows what she'll do in retaliation?"
+    "If she wanted, she could just delete everything right now."
+    "...this situation is so screwed."
+    "I'm not going to make any progress writing a poem tonight."
+    "I guess I'll try tomorrow during class."
+    "I take my shower, change my clothes, and prepare for bed."
+    "I avoid looking into any mirrors."
+    "Of course Monika is wrong about me. I just... don't feel like looking at my reflection right now, that's all."
+    "I struggle to get relaxed enough to fall asleep, but eventually I'm able to."
     
+    call nm1_main
     
+    return
     
     
     
