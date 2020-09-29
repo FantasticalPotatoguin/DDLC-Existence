@@ -1,3 +1,11 @@
+# MC awakes in his bed with a start.
+"No!"
+"Hah...hah...hah"
+mc "What the hell was that?"
+mc "That nightmare..."
+"I look at my hands, still shaking."
+"I clench them tightly, trying to calm down."
+mc "I am in control... I am in control."
 
 
 label ch2_main:
@@ -849,70 +857,94 @@ label ch2_end:
     s "I like how we get to..."
     s 1y "I-I mean..."
     "Sayori fumbles with her words."
-    s 1a "So...let's just say that one day, [ch2_winner] asked to walk home with you..."
+    s 1a "So...let's just say that one day, Yuri asked to walk home with you..."
     mc "Huh?!"
     s "What would you do?"
     mc "What kind of question is that...?"
-    mc "You're kind of putting me on the spot here..."
-    s 1y "Ehehe..."
+    mc "The answer is pretty obvious."
+    s 1y "Huh? It is?"
     menu:
         "Well..."
-        "I would walk home with [ch2_winner].":
-            if ch2_winner == "Natsuki":
-                call ch2_end_natsuki
-            else:
-                call ch2_end_yuri
+        "I would walk home with Yuri.":
+            call ch2_end_yuri
         "I would still walk home with Sayori.":
             call ch2_end_sayori
 
-    "Then again, the festival is only a few days away..."
-    "Who knows what will happen in that time?"
-    return
+    
 label ch2_end_sayori:
     mc "Sayori..."
-    mc "You really think I would ditch you for [ch2_winner]?"
+    mc "You really think I would ditch you for Yuri?"
     s 1e "Eh?!"
     s "B-But..."
-    if ch2_winner == "Natsuki":
-        s "She's so cute and fun to be around..."
-    else:
-        s "She's so beautiful and smart..."
+    s "She's so beautiful and smart..."
     mc "Jeez..."
     mc "I already see her in the club every day."
     mc "Besides, you always seem to really like going home together..."
     mc "I wouldn't just ruin that for you."
     s 1y "You're so silly, [player]..."
     s "You think about me too much sometimes."
-    s "[ch2_winner] would deserve it if she wanted it, so..."
+    s "Yuri would deserve it if she wanted it, so..."
     mc "Sayori, I've already made up my mind."
-    mc "I really can't figure you out sometimes..."
-    s "Sorry..."
-    mc "Besides, what's the point in speculating something that's never going to happen?"
+    mc "Besides, as my childhood friend, and as someone who always brightens up the club, I think you've deserved it a lot more."
+    s "I don't know..."
+    mc "Sayori, don't sell yourself short. You're a great friend."
     s 1k "Hm..."
+    s "So if I was a bad friend, then you'd spend time with someone else?"
+    mc "Huh? Umm, I guess so?"
+    "What is Sayori trying to get at?"
+    mc "But you aren't a bad friend Sayori. It's pretty much impossible for those two terms to go together. You're a ray of sunshine to everyone you meet."
+    s "If you say so..."
+    s "(Things would be so much easier if you just cared about them more.)"
     show sayori at thide
     hide sayori
     "The conversation trails off."
-    "It's kind of a weird thing for Sayori to care so much about..."
-    "But I want to respect her and keep her happy, too."
+    "I don't think my words reached Sayori."
+    "Did I say something wrong?"
+    "I keep trying to be nice to Sayori, but I don't know if she's realized just how much I've tried to be a better friend."
+    "Or maybe she does realize, and that's why she's acting this way."
+    "I thought if I tried to be a better friend, then Sayori would feel better too, but..."
+    "I don't know anything about depression, do I?"
+    call ch2_end
     return
 
-label ch2_end_natsuki:
-    mc "Walking home with Natsuki, huh..."
-    "Why does the thought of that make my heart pound...?"
-    mc "I mean..."
-    mc "I think I would be afraid of what she'd do to me if I turned her down..."
-    s 1x "Isn't she so cute and fun to be around?"
-    jump ch2_end_shared
+
 
 label ch2_end_yuri:
-    mc "Walking home with Yuri, huh..."
-    "Why does the thought of that make my heart pound...?"
-    mc "I mean..."
-    mc "Given how hard it is for her to socialize, I would feel awful turning her down, so..."
-    s 1x "Isn't she so beautiful and smart?"
-    jump ch2_end_shared
+    mc "I...would still...walk home with...you."
+    s "Eh?!"
+    "Player... don't."
+    "You know that I wouldn't abandon Sayori."
+    s "B-But..."
+    s "She's so beautiful and smart..."
+    mc "I already see her in the club every day."
+    mc "Besides, you always seem to really like going home together..."
+    mc "I wouldn't just ruin that for you."
+    s 1y "You're so silly, [player]..."
+    s "You think about me too much sometimes."
+    s "Yuri would deserve it if she wanted it, so..."
+    mc "Sayori, I've already made up my mind."
+    mc "Besides, as my childhood friend, and as someone who always brightens up the club, I think you've deserved it a lot more."
+    s "I don't know..."
+    mc "Sayori, don't sell yourself short. You're a great friend."
+    s 1k "Hm..."
+    s "So if I was a bad friend, then you'd spend time with someone else?"
+    mc "Huh? Umm, I guess so?"
+    "What is Sayori trying to get at?"
+    mc "But you aren't a bad friend Sayori. It's pretty much impossible for those two terms to go together. You're a ray of sunshine to everyone you meet."
+    s "If you say so..."
+    s "(Things would be so much easier if you just cared about them more.)"
+    show sayori at thide
+    hide sayori
+    "The conversation trails off."
+    "I don't think my words reached Sayori."
+    "Did I say something wrong?"
+    "I keep trying to be nice to Sayori, but I don't know if she's realized just how much I've tried to be a better friend."
+    "Or maybe she does realize, and that's why she's acting this way."
+    "I thought if I tried to be a better friend, then Sayori would feel better too, but..."
+    "I don't know anything about depression, do I?"
+    jump ch2_end
 
-label ch2_end_shared:
+label ch2_end:
     mc "That has nothing to do with what I just said!"
     s 4s "Ahaha! You admitted it!"
     mc "Jeez..."
