@@ -13,35 +13,44 @@ label ch1_main:
     hide monika
     "Well, I'm back at the Literature Club."
     "I was the last to come in, so everyone else is already hanging out."
-    show yuri 1a zorder 2 at t32
+    show yuri 1a zorder 2 at t11
     mc "Hey there Yuri."
-    y "Oh, hello there [player]."
+    y 1t "Oh, hello there [player]."
     mc "Everything good? I didn't see you during lunch, so I was wondering if you maybe weren't feeling well."
-    y 4b "You were looking for me?"
+    y 4a "You were looking for me?"
     mc "Well, yeah. I did say we should eat lunch together again."
     mc "Err, sorry if that was too presumptuous of me."
     y 2n "No!"
     y 2o "Ohh, I said that way too loud..."
     y 3k "Come on Yuri, get a grip."
     "I wait a bit for Yuri to collect herself."
-    y "I'm sorry. I was otherwise occupied during lunch today."
+    y 3q "I'm sorry. I was otherwise occupied during lunch today."
     y "I wouldn't mind eating with you tomorrow, though. It would be quite pleasant actually."
-    y 4a "Err, that is, only if you want to. I don't want you to feel obligated to spend time with me."
+    y 4a "Err, that is, only if you want to."
+    y 4b "I don't want you to feel obligated to spend time with me."
     mc "Sounds good to me. Like I said, I enjoy your company."
     mc "Besides, we're friends, aren't we?"
-    y 4b "You really consider me as a friend?"
+    y 4a "You really consider me as a friend?"
     mc "Yeah, of course. Why wouldn't I?"
     y 4d "..."
-    show natsuki zorder 2 at t33
+    show yuri zorder 2 at t21
+    show natsuki 4t zorder 2 at f22
     n "Hey, this is the Literature Club, {i}not{/i} the Flirting Club."
+    show natsuki zorder 2 at t22
+    show yuri 3y2 zorder 2 at f21
     y "Natsuki!"
+    show yuri 4c zorder 2 at t21
     mc "Woah, hey, it's not like that at all."
     "Right?"
+    show natsuki 5y zorder 2 at f22
     n "Uh huh, sure it isn't."
-    n "Look, you better take this club seriously."
-    n "If you think you can just come in and make sweet talk to us all day, then you've got another think coming."
+    n 5h "Look, you better take this club seriously."
+    n 5f "If you think you can just come in and make sweet talk to us all day, then you've got another think coming."
+    show natsuki zorder 2 at t22
     mc "Natsuki, seriously, it's not like that."
-    n "Sure, sure. But I'm going to be keeping a close eye on you."
+    show natsuki zorder 2 at f22
+    n 5h "Sure, sure. But I'm going to be keeping a close eye on you."
+    show natsuki 5i zorder 2 at thide
     hide natsuki
     "Great, somehow I've managed to get on Natsuki's bad side already."
     "Maybe I was coming on a little strong with Yuri."
@@ -420,13 +429,13 @@ label ch1_main:
     call ch1_end_sayori
 
     scene bg club_day
-    show monika 4b zorder 2 at t11
+    show monika 4k zorder 2 at f11
     with wipeleft_scene
     m "Okay, everyone!"
-    m "It's just about time for us to leave."
+    m 4b "It's just about time for us to leave."
     m "How did you all feel about sharing poems?"
-    show monika 4a
-    show sayori 4x zorder 2 at t31
+    show monika 4a zorder 2 at t21
+    show sayori 4x zorder 2 at t22
     s "It was a lot of fun!"
     show sayori behind yuri at thide
     show yuri 1i zorder 2 at t31
