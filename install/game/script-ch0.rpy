@@ -35,7 +35,7 @@ label ch0_main:
     
     show monika 5 zorder 2 at t11
     $ style.say_dialogue = style.edited
-    m "Okay, everybody! {nw}"
+    m "Okay, everyone! {nw}"
     $ style.say_dialogue = style.normal
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
