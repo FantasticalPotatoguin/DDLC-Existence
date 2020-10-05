@@ -43,7 +43,7 @@ label ch0_main:
     hide screen tear
     
     
-    m "Okay, everybody!"
+    m "Okay, everyone!"
     m "It's time to present poetry."
     show monika 5 zorder 1 at thide
     hide monika
