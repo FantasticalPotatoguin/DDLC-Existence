@@ -374,10 +374,19 @@ label ch21_main:
     n 5w "Hey, this conversation isn't over yet."
     m "So sorry, but we'll have to pick this up next time."
     "Monika practically pushes them out of the room."
+    show yuri at lhide
+    show natsuki at lhide
     hide yuri
     hide natsuki
+    show monika at t41
     m "Have a great evening! See you tomorrow!"
-    play music m1
+    show monika at t11
+    #The transition here could maybe be better.
+    show layer master:
+        subpixel True
+        truecenter
+        linear 240 rotate 1 zoom 1.05
+    play music m1 fadeout 1.0
     m 4n "Phew..."
     m "Sorry about that..."
     m "They really shouldn't have tried to get you involved."
@@ -452,6 +461,7 @@ label ch21_main:
     m "If you can’t even make your own choices, then why should I let you influence mine?"
     "The reality of the situation is hitting me more and more. This really is just a game, and I… I really don’t exist."
     "None of us do… Not me, not Natsuki, not Yuri, not…"
+    # Maybe we could have the music transition to something more appropriate here.
     "No! Even if this is just a game, even if I am just a puppet, that doesn’t mean that the others are any less real than Monika."
     "This pain I feel… It’s real enough to me, puppet or not. I won’t let Monika do this. She has to listen to me!"
     m 1a "Now, if there are no more interruptions from the peanut gallery, I’d like to just get this over with quickly."
@@ -501,10 +511,7 @@ label ch21_main:
     m "Just make sure that her character file is in place before starting a new game."
     m "I mean, I can do it myself, but I'd really appreciate it if you did that for me."
     m 5 "See you soon."
-    
-    
-    
-    
+    show layer master
     return
     
     

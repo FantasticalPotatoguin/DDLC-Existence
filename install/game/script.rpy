@@ -38,6 +38,7 @@ label start:
         
         
     elif persistent.playthrough == 1:
+        
         $ chapter = 10
         call ch10_main
         
@@ -48,10 +49,11 @@ label start:
         
         
     elif persistent.playthrough == 2:
+        
+        $ chapter = 40
         call ch40_main
         
-
-
+        return
         
         call poemresponse_start
         call ch21_end
