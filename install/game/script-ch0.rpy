@@ -32,7 +32,6 @@ label ch0_main:
     "I need to get to sleep earlier. If I could just get anime and video games to stop calling my name every night." 
     "Err, hopefully Sayori wasn’t right about me becoming a NEET. I’m sure that would never happen…"
     
-    
     show monika 5 zorder 2 at t11
     $ style.say_dialogue = style.edited
     m "Okay, everyone! {nw}"
@@ -86,12 +85,17 @@ label ch0_main:
     menu:
         "It looks like Yuri is anxiously awaiting on what I have to say, so I should put her worries to rest and let her know how great it is."
         
+        
         "Tell Yuri Your Thoughts.":
             mc "Wow Yuri!" 
             mc "I heard that your poems were good, but this is... "
             $ style.say_dialogue = style.edited
             show yuri 3p at h11 zorder 2
-            mc "AWFUL." 
+            play sound "<from 0.0 to 0.25>sfx/glitch2.ogg"
+            $ currentPos = get_pos()
+            stop music fadeout 1.0
+            play music '<from ' + str(currentPos) + '>bgm/5_ghost.ogg'
+            mc "AWFUL."
             mc "THE WORDING IS SO COMPLICATED, I CAN’T EVEN TELL WHAT THE POEM IS ABOUT."
             show yuri 3o at t11 zorder 2
             mc "I GUESS IT MAKES SENSE THAT YOU WOULD WANT TO CONFUSE THE READER."
@@ -105,7 +109,9 @@ label ch0_main:
             mc "THERE CERTAINLY ISN’T MUCH GOING ON UPSTAIRS."
             show yuri 3o at d11 zorder 2
             $ style.say_dialogue = style.normal
-            
+
+    $ currentPos = get_pos()
+    play music '<from ' + str(currentPos) + ' loop 4.444>bgm/5_yuri.ogg'
     y "Th, Thank you for the honest feedback…"
     y "I’m sorry, but I think I need to be alone for a bit to, think about what you’ve said."
     show yuri zorder 1 at thide
@@ -144,6 +150,9 @@ label ch0_main:
             mc "I’ve got to say Natsuki, this poem is just..."
             $ style.say_dialogue = style.edited
             show natsuki 4m zorder 2 at h11
+            $ currentPos = get_pos()
+            play sound "<from 0.0 to 0.25>sfx/glitch3.ogg"
+            play music '<from ' + str(currentPos) + '>bgm/5_ghost.ogg'
             mc "CUTE. THAT’S ALL THERE IS TO IT."
             show natsuki 4x zorder 2 at t11
             mc "CUTE. CUTE. CUTE. JUST LIKE YOU. CUTE AS A CHILD. I KNOW YOU LOOK LIKE A CHILD, BUT I DIDN’T REALIZE YOU WROTE CHILDISH TOO."
@@ -152,7 +161,9 @@ label ch0_main:
             mc "UNLESS YOU’RE INTO PEDOPHILES, I GUESS THERE ISN’T MUCH HOPE FOR YOU, IS THERE?" 
             $ style.say_dialogue = style.normal
             play sound "sfx/smack.ogg"
-    
+
+    $ currentPos = get_pos()
+    play music '<from ' + str(currentPos) + ' loop 4.444>bgm/5_natsuki.ogg'
     "I feel a hard pain right in my chest."
     "Natsuki’s fist connected hard. I knew she talked the talk, but now I know she can punch the punch too." 
     "She also took the opportunity to rip the poem right out of my hands."
@@ -184,6 +195,9 @@ label ch0_main:
         "I’m, uhh, not really sure what to make of it. Still, after what happened with Yuri and Natsuki, I think I should try extra hard to say something nice. I really hope Monika doesn’t end up punching me too…"
         
         "Tell Monika Your Thoughts.":
+            $ currentPos = get_pos()
+            play sound "<from 0.0 to 0.25>sfx/glitch1.ogg"
+            play music '<from ' + str(currentPos) + '>bgm/5_ghost.ogg'
             $ style.say_dialogue = style.edited
             mc "THE WAY YOU WAX PHILOSOPHY IS NOTHING SHORT OF BREATHTAKING, JUST LIKE YOU."
             show monika 3l zorder 2 at t11
@@ -192,10 +206,12 @@ label ch0_main:
             mc "JUST MONIKA. JUST MONIKA."
             show screen tear (10, 0.5, 0.5, 0, 20)
             play sound "sfx/s_kill_glitch1.ogg"
-            pause 0.05
+            pause 0.5
             hide screen tear
             $ style.say_dialogue = style.normal
-            
+
+    $ currentPos = get_pos()
+    play music '<from ' + str(currentPos) + ' loop 4.444>bgm/5_monika.ogg'     
     m 3k "Aww, thanks [player]. You're such a sweetheart~"
     m "Here, let me read yours now."
     show monika 3j zorder 2 at t11
@@ -244,7 +260,9 @@ label ch0_main:
         "Tell Sayori Your HONEST Thoughts.":
             show sayori 2o zorder 2 at t11
             mc "Sayori, you wrote it this morning, didn’t you?"
-            
+            $ currentPos = get_pos()
+            play sound "<from 0.0 to 0.25>sfx/glitch1.ogg"
+            play music '<from ' + str(currentPos) + '>bgm/5_ghost.ogg'
             $ style.say_dialogue = style.edited
             mc "THAT’S JUST LIKE YOU TO NOT TAKE THIS SERIOUSLY. YOU’RE SUCH A CHILD."
             show sayori 2h zorder 2 at h11
@@ -254,22 +272,27 @@ label ch0_main:
             show sayori 1e zorder 2 at t11
             mc "THIS IS WHY I STOPPED WALKING TO SCHOOL WITH YOU, YOU KNOW. JUST LIKE THIS POEM, YOU’RE ONLY WASTING MY TIME."
             $ style.say_dialogue = style.normal
-            
+
+    $ currentPos = get_pos()
+    play music '<from ' + str(currentPos) + ' loop 4.444>bgm/5_sayori.ogg'
     stop music fadeout 2.0
     s 4w "..."
     "The sight I saw before me was heartbreaking." 
     "Sayori had tears in her eyes, and she sounded very choked up." 
     "That look she gave me though; I would never forget it." 
     "She stared at me like I was some sort of monster."
-    show sayori zorder 1 at thide 
+    show sayori zorder 1 at lhide 
     hide sayori
     "Before I could say anything, she ran out of the room, her sobs echoing endlessly in my mind." 
     "In my shock, I just stood there, the whole world drowned out by that echo."
     m "(Maybe that was too much...)"
     mc "Sayori, wait!"
     scene bg corridor with wipeleft_scene
+    pause 0.1
     scene bg residential_day with wipeleft
+    pause 0.1
     scene bg house with wipeleft
+    pause 0.1
     mc "Ha... Haa..."
     mc "She's... really fast..."
     "I just realized that I was tightly holding her poem all the way here."
@@ -286,9 +309,13 @@ label ch0_main:
     "I must have sat by her door for hours, just waiting and waiting." 
     "I kept hoping she would open her door, and I kept looking at my phone awaiting any sort of message from her." 
     "Neither ever happened."
-    show sayori 4w at s11 zorder 2
+    show expression im.Grayscale('bg/club.png') zorder 5 as club
+    show sayori 4w at s11 zorder 6
+    with dissolve
     "In my head, that last look she gave me was all I could see."
+    hide club
     hide sayori
+    with dissolve
     "If only I wasn’t so dense!"
     "Maybe then I’d know what the hell is going on." 
     "I guess I hurt most of the girls today." 

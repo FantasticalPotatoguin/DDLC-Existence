@@ -448,8 +448,12 @@ label ch20_main2:
     "I feel like it's right on the tip of my tongue, but I'm not sure what."
     show monika 4k at i21 zorder 2
     m "Say, Yuri..."
+    stop music fadeout 5.0
+    #Either a fade to silence or a slightly melancholy song.
     show sayori 1s at t11 zorder 2
-    mc "...!"
+    mc "...!{nw}"
+    show screen invert(0.15,0.01) # Added in a invert just before Sayori is hidden
+    pause 0.05
     hide sayori
     mc "Did you just say, Sayori?"
     m 1p "..."
@@ -464,6 +468,8 @@ label ch20_main2:
     "Something seemed off with what Monika was saying, but my thoughts were too jumbled to really pick up on anything specific."
     "Sayori… Why did I recognize that name? And… Why did thinking about it bring me such a sharp pain in my chest?"
     mc "I guess I'll be on my way, then..."
+    #Now we fade back to the previous tune.
+    play music t3 fadein 2.0
     show monika 5a zorder 2 at t11
     m "Okay!"
     m "I'll see you tomorrow, then."
@@ -488,7 +494,7 @@ label ch20_main2:
     "and... her."
     
     scene bg kitchen with wipeleft
-    
+    # We don't really need a different song here, but if you think something else would be good here, I'll trust your judgement.
     "Finally, home again. I can’t wait to get out of these clothes." 
     "It feels like I’ve been wearing them for days. Nothing a warm shower can’t fix."
     mc "Hmm? What’s in my pocket? Paper? No, wait, this is a poem."
@@ -500,12 +506,13 @@ label ch20_main2:
     
     scene bg club_day
     with wipeleft
-    play music t3
+    #I'm not sure if the music coming suddenly is better or not. Your call.
+    play music t6 fadein 2.0
     show sayori 4 at l41
     s "Everyone! The new member is here~!"
     mc "I told you, don't call me a 'new member--'"
     scene bg residential_day with wipeleft
-    show sayori zorder 2 at t11
+    show sayori 1a zorder 2 at t11
     s 1a "Fine, fine."
     s "But you did wait for me, after all."
     s "I guess you don't have it in you to be mean even if you want to~"

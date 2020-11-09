@@ -31,18 +31,20 @@ label ch40_main:
                 pass
                 
     $ restore_all_characters()
-    play music t2
     "Wait, did it work? I'm outside my house."
+    play music t2
     s "Heeey!"
     "It's... It's..."
     show sayori 4r at t11 zorder 2
     s "Hehe. I caught up to you this time!"
-    stop music fadeout 2.0
+    #Could use a better transition to something sad here.
+    stop music fadeout 1.0
     s 4w "Huh? [player], why are you crying? What's wrong?"
+    play music t10 fadein 4.0
     "I can’t help myself. The tears just keep flowing."
     "I thought I’d never…" 
     "I give Sayori a tight hug. I can feel her warmth. She’s really here, alive…"
-    play music t9
+    # play music t9
     "She seems surprised and unsure of what to do at first, but she gives me a hug in return."
     mc "I thought, that I would never see you again."
     s 1y "Hey, it's okay. I'm right here."
@@ -61,9 +63,9 @@ label ch40_main:
     mc "It was awful..."
     stop music fadeout 2.0
     s 4x "There's no need to feel bad, okay?"
+    play music t9 fadein 2.0
     s "It was just a nightmare."
     "I really wish that were true. I really do."
-    play music t2
     s "I'm right here safe and sound."
     mc "Yeah..."
     s "Besides, I'm not going to kill myself over something like that."
@@ -96,6 +98,7 @@ label ch40_main:
     scene bg corridor with wipeleft
     stop music fadeout 2.0
     show sayori 1b at t11 zorder 2
+    play music t3 fadein 2.0
     mc "Hey, Sayori..."
     s "Hmm?"
     mc "I'm sorry for neglecting you."
@@ -127,7 +130,8 @@ label ch40_main:
     "I need to convince Monika that all of this is real anyway, not have my own existential crisis."
     stop music fadeout 2.0
     scene bg class_day with wipeleft_scene
-    play music t2
+    pause 1.0
+    play music t2 fadein 1.0
     "Finally, lunch time."
     "The nice thing about going to a Japanese school is that we get to eat in the classroom."
     "Err, wait, this is Japan, right?"
@@ -325,6 +329,8 @@ label ch40_main:
     
     
     call ch1_main
+    
+    return
     
     
     $ if all(clear for clear in persistent.clear): persistent.clearall = True
