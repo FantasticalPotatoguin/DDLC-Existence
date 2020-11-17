@@ -257,7 +257,7 @@ label ch0_main:
     menu:
         "..."
         
-        "Tell Sayori Your HONEST Thoughts.":
+        "Tell Sayori Your HONEST Thoughts":
             show sayori 2o zorder 2 at t11
             mc "Sayori, you wrote it this morning, didn’t you?"
             $ currentPos = get_pos()

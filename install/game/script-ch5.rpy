@@ -84,17 +84,21 @@ label ch5_main:
     stop music fadeout 2.0
     scene bg bedroom
     with dissolve_scene_full
+    #add music to this scene? 
 
     "Eventually I woke up. I don’t think I slept well, but I’m not sure." 
     "I hadn’t set my alarm, so I woke up later than I normally would."
+    #add fade to transition
     scene bg kitchen
     "I didn’t care. I grabbed a quick breakfast, and walked outside. I was still wearing my clothes from yesterday."
+    #add fade to transition
     scene bg residential_day
     "I waited for Sayori, but she never came to greet me. I hoped that she had gone to school already, without me." 
     "Unfortunately, I didn’t have the luxury of waiting there forever, and had to make my way to school as well."
 
     scene bg corridor with wipeleft_scene
     show monika 5 zorder 2 at t11
+    #update Monika's poses in this block
     m "Hey there [player]!"
     m "How's it going?"
     m "You're kind of late today."
@@ -112,6 +116,7 @@ label ch5_main:
     "A simple text should do it." 
     "Wait... what the hell is this?" 
     "The last message I had sent her…"
+    #add phone screen image? 
     "I DON'T WANT TO TALK TO YOU EVER AGAIN"
     "That... that's not what I sent."
     "What the hell?!"
@@ -124,12 +129,14 @@ label ch5_main:
     mc "Sayori, open up, please!"
     "I banged, and banged, and banged on her door, desperate to get in."
     "All rational thought was starting to leave me."
+    #Knocking sound effect? 
     "I banged on the door so hard, my hands were starting to feel broken."
     mc "I need to change tactics."
     "I picked up the biggest rock I could find nearby."
     "I was getting in, even if I had to break through a window."
     "Thankfully, my eyes caught a glare beneath me."
     "As luck would have it, there was a spare key under that rock." 
+    #Door opening sound effect?
     "I frantically unlocked the door, and stumbled inside."
     scene black with wipeleft
     "No sign of her."

@@ -57,6 +57,8 @@ label ch20_main2:
     "One of the most popular girls in school is happy to see me?"
     "We do know each other - well, we rarely talked, but we were in the same class last year."
     "Did I really leave that much of an impression on her?"
+
+    #Change Monika poses here? Is this section original game code?
     mc "What did you come in here for, anyway?"
     m 1i "Let me just cut to the chase." 
     m "I've been looking for new members for my club, and I think you'd fit right in."
@@ -78,8 +80,10 @@ label ch20_main2:
     m "A literature club!{fast}"
     window auto
     mc "Literature...?"
+    # Make Monika self-awarely offended?
     "That sounds kind of...dull?"
     mc "How many members do you have so far?"
+    #poses can definitely be more dynamic through here
     m 5 "Um..."
     m "Ahaha..."
     m "It's kind of embarrassing, but there are only three of us so far."
@@ -107,6 +111,7 @@ label ch20_main2:
     mc "I-It's nothing, really..."
     mc "Like you said, it just feels right."
     mc "I don't know if you believe in fate, but it kinda feels like that."
+    # Are italics possible for these quiet lines to distinguish? 
     m "(Yeah, I guess free will would be a foreign concept for you.)"
     mc "Hmm?"
     m "Oh, nothing! I'm just musing to myself."
@@ -131,6 +136,8 @@ label ch20_main2:
         show monika g1 at l31
     else:
         show monika 3b at l31
+
+    #shocker, more poses to make fancy so that stuff doesn't mismatch
     m "I'm back~!"
     m "And I brought a guest with me!"
     show yuri 2t zorder 2 at t33
@@ -184,11 +191,16 @@ label ch20_main2:
     n 4q "It sounds like you knew he was going to join..."
     n 4y "Did you make him an offer he couldn't refuse?"
     show natsuki zorder 2 at t32
+    # Change pose to make Monika more shocked, less embarassed
     show monika zorder 2 at f31
     m 1e "Hey, what's that suppose to mean?"
+    # Change Natsuki's pose here
     n 4y "Don't worry Monika, I see how it is. You're secret is safe with me."
     m 2n "It's really not like that..."
     show monika zorder 2 at t31
+    #Yuri comes into focus a line too early
+    #Don't like that the other girl's faces stay exactly the same
+    #while Yuri is talking, change to resting pose
     show yuri zorder 2 at f33
     "A slightly uncomfortable silence is starting to fill the room."
     y 1a "In any case, I should at least make some tea, right?"
@@ -196,6 +208,7 @@ label ch20_main2:
     show monika zorder 2 at f31
     m 1b "Yeah, that would be great!"
     m "Why don't you come sit down, [player]?"
+    #Change to thide poses so they fade instead of disappear
     hide monika
     hide natsuki
     hide yuri
@@ -203,6 +216,7 @@ label ch20_main2:
     "The girls have a few desks arranged to form a table."
     "Natsuki and Yuri walk over to the corner of the room, where Natsuki grabs a wrapped tray and Yuri opens the closet."
     "Still feeling awkward, I take a seat next to Monika."
+    #More expressive Monika
     show monika 1a zorder 2 at t11
     m "So, I know you didn't really plan on coming here..."
     m "But we'll make sure you feel right at home, okay?"
@@ -213,10 +227,11 @@ label ch20_main2:
     m "Not many people are very interested in putting out all the effort to start something brand new..."
     m "Though, now that we have enough members to be an official club, I'm not too worried about gaining new members."
     m 2k "It was hard enough to find you guys as it is..."
+    #ask about this line, if shifting to the right is intentional
+    #90% sure this shift is an accident
     show monika zorder 2 at t22
     "Monika must have worked really hard just to find these three, err, two."
     "Come on me, I'm better at counting than that."
-    "Yuri returns to the table, carrying a tea set."
     "Natsuki proudly marches back to the table, tray in hand."
     show natsuki 2z zorder 2 at t32
     n "Okaaay, are you ready?"
@@ -229,46 +244,57 @@ label ch20_main2:
     show monika zorder 2 at t33
     show natsuki zorder 2 at f32
     n 2m "Huh? This is the first time I've made cupcakes for you guys."
+    #some sort of minor glitch here would be cool
     m 3k "Oh, well, I'm sure they're still a delight either way."
+    #Natsuki needs an expression change here
     n " Whatever, just hurry and take one!"
     "Monika takes one, and I follow."
     show natsuki zorder 2 at t32
     "I turn the cupcake around in my fingers, looking for the best angle to take a bite."
     show monika zorder 1 at thide
     hide monika
+    #Change Natsuki's face here
     show natsuki 1c zorder 2 at t32
     "Natsuki is quiet."
     "I can't help but notice her sneaking glances in my direction."
     "Is she waiting for me to take a bite?"
     "I finally bite down."
     "The icing is sweet and full of flavor - I wonder if she made it herself."
+    #Have Natsuki's face react to this line
     mc "This is really good."
     mc "Thank you, Natsuki."
     n 5h "W-Why are you thanking me? It's not like I...!"
     "{i}(Haven't I heard this somewhere before...?){/i}"
     show natsuki at s32
     n 5s "...Made them for you or anything."
+    #minor reaction from Natsuki here
     mc "Eh? I thought you technically did."
     show natsuki zorder 2 at t32
     n 12c "Well, maybe!"
     n "But not for, y-you know, {i}you!{/i} Dummy..."
+    #Natsuki arm cross or something
     mc "Alright, alright..."
     show natsuki zorder 1 at thide
     hide natsuki
     "I give up on Natsuki's weird logic and dismiss the conversation."
+    #Show Yuri here instead, dip sprite when placing teacups
     "Yuri returns to the table, carrying a tea set."
     "She carefully places a teacup in front of each of us before setting down the teapot next to the cupcake tray."
     show yuri 1a zorder 2 at t21
     mc "You keep a whole tea set in this classroom?"
+    #Yuri expressions
     y "Don't worry, the teachers gave us permission."
     y "After all, doesn't a hot cup of tea help you enjoy a good book?"
     mc "Ah... I-I guess..."
     show monika 4a zorder 2 at f22
+    #Possible split into two lines for expression purposes
     m "Ehehe, don't let yourself get intimidated, Yuri's just trying to impress you."
     show monika zorder 2 at t22
     show yuri at hf21
     y 3n "Eh?! T-That's not..."
+    #Have Yuri look away directly with this line
     "Insulted, Yuri looks away."
+    #Have Yuri peek back at player
     y 4b "I meant that, you know..."
     show yuri zorder 2 at t21
     mc "I believe you."
@@ -279,14 +305,18 @@ label ch20_main2:
     "Yuri faintly smiles to herself in relief."
     show monika zorder 1 at thide
     hide monika
+    #Change Yuri's t number
     show yuri 1a zorder 2 at t32
     y "So, [player], what kinds of things do you like to read?"
     mc "Well... Ah..."
     "Considering how little I've read these past few years, I don't really have a good way of answering that."
+    #Yuri eyebrow raise
     mc "...Manga..."
     "I mutter quietly to myself, half-joking."
     show natsuki 1c zorder 2 at t41
+    #Natuski jump
     "Natsuki's head suddenly perks up."
+    #Natsuki mouth close
     "It looks like she wants to say something, but she keeps quiet."
     "I guess she's the manga reader who Monika was telling me about."
     show natsuki zorder 1 at thide
@@ -298,6 +328,7 @@ label ch20_main2:
     mc "Anyway, what about you, Yuri?"
     y 1l "Well, let's see..."
     "Yuri traces the rim of her teacup with her finger."
+    #Don't like poses through here but might leave cuz they're original I think
     y 1a "My favorites are usually novels that build deep and complex fantasy worlds."
     y "The level of creativity and craftsmanship behind them is amazing to me."
     y 1f "And telling a good story in such a foreign world is equally impressive."
@@ -316,6 +347,7 @@ label ch20_main2:
     m 1a "It suits your personality."
     show monika zorder 2 at t33
     show yuri zorder 2 at f32
+    #Change pose I think
     y 1a "Oh, is that so?"
     y "Really, if a story makes me think, or takes me to another world, then I really can't put it down."
     y "Surreal horror is often very successful at changing the way you look at the world, if only for a brief moment."
@@ -325,6 +357,7 @@ label ch20_main2:
     show natsuki zorder 2 at t31
     show yuri zorder 2 at f32
     y 1f "Oh? Why's that?"
+    #Yuri's face does literally nothing through this segment, have her react to things
     show yuri zorder 2 at t32
     show natsuki zorder 2 at f31
     n 5c "Well, I just..."
@@ -344,8 +377,12 @@ label ch20_main2:
     show monika zorder 2 at t33
     show natsuki 1p zorder 2 at f31
     n "I am not cute!!"
+    #Shift in reaction
     n "And don't be looking at my poems! Those are for my eyes only."
+    #Natsuki return to neutral
     show natsuki zorder 2 at t31
+
+    #Don't like Monika's pose here
     show monika zorder 2 at f33
     m 1j "Fine, fine~"
     show monika 1a zorder 2 at t33
@@ -354,13 +391,17 @@ label ch20_main2:
     n 1c "Eh? Well, I guess sometimes."
     n "Why do you care?"
     show natsuki zorder 2 at t31
+    #Natsuki surprise
     mc "I think that's impressive."
     mc "Why don't you share them sometime?"
     show natsuki zorder 2 at f31
     n 5q "N-No!"
+    #Change so averting eyes is in sync
     "Natsuki averts her eyes."
+    #Peek back at player
     n "You wouldn't...like them..."
     show natsuki zorder 2 at t31
+    #Natsuki return to neutral
     mc "Ah...not a very confident writer yet?"
     show yuri zorder 2 at f32
     y 2f "I understand how Natsuki feels."
@@ -369,6 +410,7 @@ label ch20_main2:
     y "You must be willing to open up to your readers, exposing your vulnerabilities and showing even the deepest reaches of your heart."
     show yuri zorder 2 at t32
     show monika 2a zorder 2 at f33
+    #Monika better expressions
     m "I'm sure you have lots of writing experience Yuri."
     m "Maybe if you share some of your work, you can set an example and help Natsuki feel comfortable enough to share hers."
     show yuri at s32
@@ -376,6 +418,7 @@ label ch20_main2:
     mc "I guess it's the same for Yuri..."
     "We all sit in silence for a moment."
     show monika zorder 2 at f33
+    #Don't like this pose, do the finger in the air one
     m 5a "Hey, I just got an idea!"
     m "How about this?"
     show monika zorder 2 at t33
@@ -387,6 +430,7 @@ label ch20_main2:
     show yuri zorder 2 at t32
     show monika zorder 2 at f33
     m 2b "Let's all go home and write a poem of our own!"
+    #Background poses for other girls
     m "Then, next time we meet, we'll all share them with each other."
     m "That way, everyone is even!"
     show monika 2a zorder 2 at t33
@@ -406,22 +450,34 @@ label ch20_main2:
     y 2f "We should probably start finding activities for all of us to participate in together."
     y 2h "I did decide to take on the responsibility of Vice President, after all..."
     y "I need to do my best to nurture the club as well as its members."
+    #These poses could be better
     y 2a "Besides, now that we have a new member..."
     y "It seems like a good step for us to take."
+    #This one especially needs changed
+    #Have Natsuki and Monika look at player here
     y "Do you agree as well, [player]?"
+    #Drop Yuri out of focus
     mc "Umm, sure, I guess."
     mc "I have no experience writing poems though."
+    #Monika focus
     m 3b "That's completely fine."
     m "This club is for those who are interested in literature, whether you're a pro or not."
     m "We can all grow our skills together."
     m 5 "Besides, we won't make fun of you."
+    #Expression change at "much", possible pose change to accomodate
     m "Much~."
+    #Drop Monika out of focuse
+    #Yuri focus
     y 3w "Monika..."
+    #Defocus Yuri, focus Monika
+    #Monika better expressions
     m 1a "I'm joking, I'm joking."
     m "So, what do you say [player]?"
+    #All react in bg
     mc "Yeah, I can take a shot at writing poetry."
     mc "I did say I'd join after all, so it would be pretty lame of me to drop out at the first sign of trouble."
     m 1e "Thank you so much for this. You're really amazing."
+    #See about glitching the word "everything", idk that I want Glitch Text but something
     m "I'll do everything I can to give you a great time, okay?"
     show monika zorder 2 at t33
     mc "Ah...thanks, I guess."
@@ -430,10 +486,12 @@ label ch20_main2:
     show monika zorder 2 at t11
     hide yuri
     hide natsuki
+    #More dynamic poses through here
     m 3b "Okay, everyone!"
     m "I think with that, we can officially end today's meeting on a good note."
     m "Everyone remember tonight's assignment:"
     m "Write a poem to bring to the next meeting, so we can all share!"
+    #Monika's face should change with this line
     "Monika looks over at me once more."
     m 1a "[player], I look forward to seeing how you express yourself."
     show monika 5 at hop
@@ -446,6 +504,7 @@ label ch20_main2:
     "Meanwhile, the girls continue to chit-chat as Yuri cleans up the tea set."
     "It's kind of weird though. There's something that's been nagging at me all day."
     "I feel like it's right on the tip of my tongue, but I'm not sure what."
+    
     show monika 4k at i21 zorder 2
     m "Say, Yuri..."
     stop music fadeout 5.0
@@ -455,13 +514,16 @@ label ch20_main2:
     show screen invert(0.15,0.01) # Added in a invert just before Sayori is hidden
     pause 0.05
     hide sayori
-    mc "Did you just say, Sayori?"
+    mc "Did you just say \"Sayori\"?"
+    #maybe different face for Monika here
     m 1p "..."
     "I’m not sure why, but that name felt very important to me. Who was she?"
+    #Yuri expressions
     show yuri 1a at t22 zorder 2
     y "Oh, no, Monika was just trying to get my attention." 
     y "I’m sure she wanted to discuss our plans for the upcoming festival." 
     y "As Vice President, it’s important that I do what I can to help Monika keep the club interesting."
+    #Monika slightly different expressions, embarassed/angry
     m 4k "Yes, that’s right, I just wanted to discuss with Yuri on what we can do to make the festival fun for everyone."
     m "Besides, there isn’t anyone named Sayori that’s part of this club."
     m "Trust me, you already met all of us. Why, I don’t even know anyone named Sayori. Ahaha…"
@@ -470,16 +532,20 @@ label ch20_main2:
     mc "I guess I'll be on my way, then..."
     #Now we fade back to the previous tune.
     play music t3 fadein 2.0
+    #Remove this fade
     show monika 5a zorder 2 at t11
     m "Okay!"
     m "I'll see you tomorrow, then."
     m "I can't wait!"
+    #Expressions change as girls fade together
 
     scene bg residential_day
     with wipeleft_scene
 
     "With that, I depart the clubroom and make my way home."
     "The whole way, my mind wanders back and forth between the four girls:"
+    
+    #Make these sprites black and white or sepia, since reminiscing? 
     show natsuki 4a zorder 2 at t31
     "Natsuki,"
     show yuri 1a zorder 2 at t32
@@ -497,6 +563,7 @@ label ch20_main2:
     # We don't really need a different song here, but if you think something else would be good here, I'll trust your judgement.
     "Finally, home again. I can’t wait to get out of these clothes." 
     "It feels like I’ve been wearing them for days. Nothing a warm shower can’t fix."
+    #Split this line, add rustling sound effect
     mc "Hmm? What’s in my pocket? Paper? No, wait, this is a poem."
     "Who wrote this, and why do I have this?"
     call showpoem (poem_s1, img="sayori 1")
@@ -508,17 +575,21 @@ label ch20_main2:
     with wipeleft
     #I'm not sure if the music coming suddenly is better or not. Your call.
     play music t6 fadein 2.0
+    #Definitely going with black and white/sepia for these sprites
+    #Black and white background as well, with vignettes
     show sayori 4 at l41
     s "Everyone! The new member is here~!"
-    mc "I told you, don't call me a 'new member--'"
+    mc "I told you, don't call me a \"new member--\""
     scene bg residential_day with wipeleft
     show sayori 1a zorder 2 at t11
     s 1a "Fine, fine."
     s "But you did wait for me, after all."
+    #Add better expression for Sayori here
     s "I guess you don't have it in you to be mean even if you want to~"
     scene bg house with wipeleft
     show sayori 4p at t11 zorder 2
     play music t9
+    #Don't like Sayori's expressions here
     s "Highschool is kind of scary, huh?"
     s "All this new stuff to learn... I think my brain's going to burst!"
     mc "Come on Sayori, just because you're a bit of an airhead doesn't mean you can't get used to all of this new stuff."
@@ -527,9 +598,11 @@ label ch20_main2:
     mc "Well, I'll see you tomorrow then."
     s 1k "Hey, [player]..."
     mc "Hmm?"
+    #Sayori looks into player's eyes
     s "Do you think, we'll always be like this? Close friends, who walk and talk on their way to school and from?"
     mc "Well, I don't see why not."
     mc "We've been doing it this long."
+    #Sayori hopeful
     s "Really?"
     mc "Well, I certainly like to think we'll be there for each other, at least when we really need help."
     s 1 "So you won't forget me?"
@@ -545,12 +618,14 @@ label ch20_main2:
     mc "I'm sorry. I'm so, so sorry."
     mc "Nothing in my life was more important than yours."
     scene bg kitchen with wipeleft
+    #Split this line
     "I hunched over my counter, head in my arms, for a good while. Strangely, it felt good to cry, like a tremendous pressure inside of me was finally coming loose."
     "Still, all of my regrets lingered."
     scene bg bedroom with wipeleft
     "I barely had the energy to shower and change my clothes."
     "Honestly, I don't know if I'll be able to attend school tomorrow, let alone the Literatrue Club."
     stop music fadeout 2.0
+    #Split this line
     mc "Wait, didn't I just join the club today? That can't be right. I've already shared poems with everyone. No, wait, we're suppose to do that tomorrow..."
     "In my grief, I failed to realize something very important."
     "This week had restarted itself."
