@@ -455,3 +455,5 @@ install/renpy/translation/scanstrings.py
 install/renpy/ui.py
 install/renpy/vc_version.py
 install/renpy/warp.py
+install/errors.txt
+install/traceback.txt
