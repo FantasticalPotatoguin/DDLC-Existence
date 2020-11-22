@@ -9,6 +9,7 @@ label ch21_main:
         linear 240 rotate 8 zoom 1.30
     m "Hi again, [player]!"
     m "Glad to see you didn't run away on us. Hahaha!"
+    #Expression change, eyes close probly
     mc "Nah, don't worry."
     mc "This might be a little strange for me, but I at least keep my word."
     show monika zorder 1 at thide
@@ -24,10 +25,12 @@ label ch21_main:
     show yuri glitch2 zorder 2 at t32
     y "Thanks for keeping your promise, [player]."
     y 1a "I hope this isn't too overwhelming of a commitment for you."
+    #Possible expressions
     y 1u "Making you dive headfirst into literature when you're not accustomed to it..."
     show natsuki glitch1 zorder 2 at i33
     n "Oh, come on! Like he deserves any slack."
     n 4e "You already had to be dragged here by Monika."
+   #more dynamic expressions
     n "I don't know if you plan to just come here and hang out, or what..."
     n "But if you don't take us seriously, then you won't see the end of it."
     show monika 2b onlayer front at l41
@@ -43,35 +46,43 @@ label ch21_main:
     "Swiftly defeated, Natsuki plops back into her seat."
     show yuri 2s zorder 2 at t11
     y "I'm sorry, [player]..."
+    #Yuri mouth open
     y "We'll make sure to put your comfort first, okay?"
     show yuri 2g
     "Yuri shoots Natsuki with a disappointed glance."
     y 1a "Um, anyway..."
+    #Better expressions through here
     y "Now that you're in the club and all..."
     y "...Perhaps you might have interest in picking up a book to read?"
     "I remember this. Yuri wants to share a book with me."
     mc "Well..."
     mc "I've actually started reading a book."
+    #Yuri face react
     mc "Like you said, I'm in this club now."
     mc "So it only feels right for me to do something like that."
     y 4b "Oh..."
     y "Uu..."
+    #Yuri glance at player
     y "It's just that, I wanted to give you a recommendation."
     mc "Which book were you going to recommend?"
     "Yuri reaches into her bag and pulls out a book."
     y 1s "I didn't want you to feel left out..."
     y "So I picked out a book that I thought you might enjoy."
     y "It's a short read, so I thought it would keep your attention, even if you don't usually read."
+    #Yuri surprised expression
     mc "Hey, that's the same book I started reading! What a coincidence."
     y "Oh, is that so?"
     mc "Have you read this one before?"
     y 3t "Y-yes, I have..."
+    #Yuri smile or blush
     mc "Well, we can discuss it together if you want."
+
     y 4b "You want to discuss it... with me?"
     y "I... Uhh... Umm..."
     "Uh oh, I think I broke Yuri. Perhaps I shouldn't have been so forceful."
     y 3u "I would like that, very much..."
     mc "Just let me finish reading it, and we can discuss it."
+    #Yuri look directly at player
     y "I look forward to hearing what you think."
     "Well, at least I was able to make somebody happy..."
     show yuri zorder 1 at thide
@@ -87,8 +98,10 @@ label ch21_main:
     "I think I'll rest a bit before we present our poems."
     "I didn't get much sleep..."
     "Hopefully nobody notices if I rest my eyes a bit."
+    #Eyes closing effect? 
     "Hmm, it sounds like Monika is talking to herself."
     show monika at t11 zorder 2
+    #Monika better expressions, maybe farther away if possible
     m 1q "Sigh"
     m "I just don't understand."
     m "Things were supposed to be different this time."
@@ -99,12 +112,17 @@ label ch21_main:
     "I couldn't quite tell everything that she said, but Monika sounded very doubtful."
     "It's a far cry from her usual confident self."
     "I guess even the most popular girl in school has issues."
+    
+    #Show everyone
     m "Alright, everybody!"
     m "Let's get started with sharing our poems. I'm looking forward to seeing what all of you have written."
     "Alright, here comes the moment of truth."
     "I really, really hope this works."
     "I guess I'll start with Yuri."
+    #Add in poem sharing choices? 
+    #Fade out everyone but Yuri
     show yuri 3l at t11 zorder 2
+    #Yuri expressions
     y "..."
     y 3t "..."
     mc "I can read your's first if you want Yuri." 
@@ -117,9 +135,13 @@ label ch21_main:
     "Please let my words come out the way I want them to..."
     call showpoem (poem_y1, img="yuri 3t")
     "Yep, same poem as last time. My thoughts on it are about the same as well." 
+    #Yuri reacts to MC's words
     mc "I’m sorry Yuri, but I don't really know what your poems about. It definitely paints a vivid picture in my head though, I can tell you that."
+    #Glance away
     y 4b "You... didn't really like it, did you?"
+    #Glance back, hopeful
     mc "No, I did like it! I really did Yuri, I just don't have much to say."
+    #Blush
     y 1m "I'm...really glad you like it."
     y "I'll be honest..."
     y 1a "Since it's our first time sharing, I wanted to write something a little more mild."
@@ -137,25 +159,34 @@ label ch21_main:
     y "And soon to be left with nothing..."
     mc "I see."
     mc "I think I can relate, to be honest."
+    #Yuri react
     mc "Hey, Yuri. I know we haven't known each other for very long, but I hope you know you can be yourself around me."
+    #Yuri smile
     mc "I won't judge, I promise."
+    #Embarassed smile
     y 4a "Why are you always so nice to me? I'm sure my presence and demeanor is very unwanted."
     mc "Yuri, you don't give yourself enough credit. You're very thoughtful, and always trying hard to be nice to others."
     mc "Honestly, I wish I was as good of a person as you are."
     y 4e "...Thank you..."
     mc "Well, uhh... here. Let me know what you think of my poem."
+    #Paper sound effect
     y 1k "..."
     y "It's very good, even for a first attempt. I can't say it's my prefered style of writing, but I don't dislike it either."
+    #Different face
     y "Though, the handwritting is a lot more feminine than I was expecting."
     y 2n "Err, not that there's anything wrong with that. I just wasn't expecting it."
+    #Return to neutral
     mc "Does it remind you of anything or anyone?"
     y 1t "No, I can't say that it does. Was it supposed to?"
+    #Close mouth
     mc "Uhh, no, sorry. I was just wondering..."
     "I guess Yuri didn't remember Sayori at all."
     "Damn it! This was my only lead. I... I don't know what to do."
     "Sayori..."
+    #Yuri motion in some way
     "My emotions must have been clear on my face, as Yuri suddenly put her hand on mine."
     "Her grasp on my hand was very gentle and caring."
+    #I like this pose ok, but more expression changes needed here
     y 4c "Oh my God! I'm so sorry! I shouldn't have done that. Just touching your hand like that without your permission..."
     y "Please forgive me..."
     mc "Yuri, it's okay, trust me. I actually appreciate you caring about me."
@@ -166,6 +197,7 @@ label ch21_main:
     "Well, I guess it's time to try my luck with Natsuki."
     scene bg closet
     show natsuki 2a at t11 zorder 2
+    #Paper sound effect
     "I had zero luck with Natsuki."
     "She liked it, made fun of my handwriting, questioned certain word choices, and that was it."
     "This is going no where..."
@@ -175,22 +207,29 @@ label ch21_main:
     "The message in this poem is speaking to me more and more..."
     n 5n "Hey, you don't have to look so sad while reading it."
     mc "Sorry, Natsuki. I've just had a lot on my mind."
+    #Ok with poses up to here, but react to MC's words
     mc "I guess the message of your poem really spoke to me."
     n 2z "Ah, I see you picked up on it."
+    #Proud face
     n "Some people might like to make their poems really complicated, but I like to get to the point."
     mc "Yeah, I can see that."
     n 2s "..."
+    #Subtler change, look at player
     n "Look, I don't know what's bugging you, but... it can't be that bad right?"
+    #Need dynamic faces throughout here
     mc "Huh?"
     n "I mean, you're here talking and sharing with us right? It can't be that bad if you're capable of that."
     mc "Uhh, I guess that makes sense..."
     "Natsuki's pep talk isn't the best, but I can tell she's trying."
     mc "Thanks for trying to cheer me up Natsuki. I guess you can be sweet when you want to."
     n 1r "What's that suppose to mean?"
+    #Cross arms instead
     n 2y "I am always kind and generous."
     mc "Just not cute, right?"
+    #Happier face
     n "Exactly!"
     mc "Alright, alright. Thanks Natsuki. You really know how to bright up someone's day."
+    #Change faces here
     n 1z "That's right, and I'm not even using one percent of my powers."
     n "Don't you go forgetting that."
     hide natsuki
@@ -199,10 +238,12 @@ label ch21_main:
     "Still, my problems haven't really been solved."
     "It's just Monika left..."
     show monika at t11 zorder 2
+    #Monika faces
     m 3j "Hey there, [player]!"
     m "I hope your first real day as an official member is going well."
     mc "Monika... can you please read my poem first?"
     m 3n "Uhh, sure... I don't see why not."
+   #Especially have Monika react to MC's words
     mc "When you're reading it, I need you to really think about it. The word choice, the handwriting, the feelings it gives you."
     mc "I want you to really think about those things, and really try to remember where you've seen and felt these things before."
     mc "Please Monika..."
@@ -216,8 +257,10 @@ label ch21_main:
     mc "You recognize it? Yes, I knew I wasn’t crazy!" 
     mc "Please, Monika, I don’t understand what’s going on here. If you know anything, you've got to tell me. Please."
     m 1r "I just don’t understand. You shouldn’t be able to have this…" 
+    #Monika more angry expression
     m "Alright, fine, I’ll explain things once we’re done with our club meeting."
     "Finally... some answers."
+    #Change to thide so monika fades
     hide monika
     "My eyes land on Yuri and Natsuki."
     show yuri 2g zorder 2 at t21
@@ -225,6 +268,7 @@ label ch21_main:
     "They gingerly exchange sheets of paper, sharing their respective poems."
     show yuri 2i at t21
     "As they read in tandem, I watch each of their expressions change."
+    #Have their expressions change
     "Natsuki's eyebrows furrow in frustration."
     "Meanwhile, Yuri smiles sadly."
     show natsuki zorder 3 at f22
@@ -240,16 +284,20 @@ label ch21_main:
     n "I guess you could say it's fancy."
     show natsuki zorder 2 at t22
     show yuri zorder 3 at f21
+    #Yuri different expression
     y 2i "Ah-- Thanks..."
+    #Condescending
     y "Yours is...cute..."
     show yuri zorder 2 at t21
     show natsuki zorder 3 at f22
     n 2h "Cute?"
+    #Expressionsssss
     n 1h "Did you completely miss the symbolism or something?"
     n "It's clearly about the feeling of giving up."
     n "How can that be cute?"
     show natsuki zorder 2 at t22
     show yuri zorder 3 at f21
+    #Expressions
     y 3f "I-I know that!"
     y "I just meant..."
     y 3h "The language, I guess..."
@@ -258,9 +306,11 @@ label ch21_main:
     show natsuki zorder 3 at f22
     n "Eh?"
     n 4w "You mean you have to try that hard to come up with something nice to say?"
+    #Hand on hip? 
     n "Thanks, but it really didn't come out nice at all!"
     show natsuki zorder 2 at t22
     show yuri zorder 3 at f21
+    #Yuri different face
     y 1i "Um..."
     y "Well, I do have a couple suggestions..."
     show yuri zorder 2 at t21
@@ -272,8 +322,10 @@ label ch21_main:
     n "And [player] did, too!"
     n "So based on that, I'll gladly give you some suggestions of my own."
     n "First of all--"
+    #Natsuki close mouth
     show natsuki zorder 2 at t22
     show yuri zorder 3 at f21
+    #Yuri more saltiness
     y 2l "Excuse me..."
     y "I appreciate the offer, but I've spent a long time establishing my writing style."
     y 2h "I don't expect it to change anytime soon, unless of course I come across something particularly inspiring."
@@ -291,6 +343,7 @@ label ch21_main:
     show natsuki zorder 3 at f22
     n 4y "Oh?"
     n "I didn't realize you were so invested in trying to impress our new member, Yuri."
+    #Natsuki close mouth
     play music t7
     show natsuki zorder 2 at t22
     show yuri zorder 3 at f21
@@ -300,28 +353,34 @@ label ch21_main:
     y "You...You're just..."
     "Yuri stands up as well."
     y 2r "Maybe you're just jealous that [player] appreciates my advice more than he appreciated yours!"
+    #Yuri close mouth
     show yuri zorder 2 at t21
     show natsuki zorder 3 at f22
     n 1e "Huh! And how do you know he didn't appreciate {i}my{/i} advice more?"
     n "Are you that full of yourself?"
+    #Natsuki close mouth
     show natsuki zorder 2 at t22
     show yuri zorder 3 at f21
     y 3h "I...!"
     y "No..."
     y "If I was full of myself..."
+    #Natsuki reacts here instead, maybe jumps
     y 1r "...I would deliberately go out of my way to make everything I do overly cutesy!"
+    #Yuri close mouth
     show yuri zorder 2 at t21
     show natsuki zorder 3 at f22
     n 1o "Uuuuuu...!"
     show monika 2l behind yuri, natsuki at l41
     show yuri zorder 2 at t32
     show natsuki zorder 2 at t33
+    #Monika expression dynamics
     m "Girls..."
     m "Can we please not do this?"
     show monika 2 at lhide
     hide monika
     show natsuki zorder 3 at f33
     n 1f "Well, you know what?!"
+    #Yuri react here instead
     n "I wasn't the one whose boobs magically grew a size bigger as soon as [player] started showing up!!"
     show yuri 3p at h32
     show natsuki zorder 2 at t33
@@ -329,8 +388,11 @@ label ch21_main:
     show monika 3l behind yuri, natsuki at l41
     m "Um, Natsuki, that's a little--"
     show monika at h41
+    #Make sure Monika isn't also being focused here, only Y and N should be in focus
     show yuri 3p zorder 3 at f32
     show natsuki 1e zorder 3 at f33
+    #Yuri angry instead of shocked
+    #Monika shocked, dip
     ny "This doesn't involve you!"
     show monika at lhide
     hide monika
@@ -338,6 +400,7 @@ label ch21_main:
     show natsuki zorder 2 at t33
     show yuri zorder 2 at t21
     show natsuki 1g zorder 2 at t22
+    #Expression changes as they look at you
     "Suddenly, both girls turn towards me, as if they just noticed I was standing there."
     show yuri zorder 3 at f21
     y 2n "[player]...!"
@@ -359,6 +422,7 @@ label ch21_main:
     y "Avoiding them is not only unnecessarily limiting yourself...it's also a waste!"
     y 1t "You understand that, right, [player]?"
     show yuri zorder 2 at t21
+    #Yuri close mouth
     mc "Um...!"
     show yuri 1t zorder 3 at f21
     show natsuki 1e zorder 3 at f22
@@ -370,6 +434,9 @@ label ch21_main:
     "It's not like I know anything about writing..."
     show monika 3k at t11 zorder 2
     m "Oh look, club time is over. Sorry, but you all need to leave now."
+   #Different Yuri expression
+   #Focusing on characters when they talk
+   #Monikas expressions need to not be static
     y 3o "But..."
     n 5w "Hey, this conversation isn't over yet."
     m "So sorry, but we'll have to pick this up next time."
@@ -387,6 +454,8 @@ label ch21_main:
         truecenter
         linear 240 rotate 1 zoom 1.05
     play music m1 fadeout 1.0
+    #EXPRESSIONS AND EFFECTS IN THIS BLOCK ARE TOP PRIORITY
+    #Major expression work throughout whole block of text
     m 4n "Phew..."
     m "Sorry about that..."
     m "They really shouldn't have tried to get you involved."
@@ -397,17 +466,23 @@ label ch21_main:
     m "I'm so pathetic..."
     mc "Monika..."
     m 1b "So, you want answers right?"
+    #See if I can flip/spin Monika upside down for this line
     m "Well, it's a doozy, so I hope you're ready for your life to be thrown upside down."
     mc "Honestly, at this point, I don't think anything could surprise me."
     m 5 "Well, as {i}you{/i} already know, I know the truth of this world." 
     m "I know that this is all just a game, but I also know that you’ve modded it."
-    m "I’m not sure exactly who made this mod (they could be you though I don’t think so), but I do know that if you’re playing this then you really wanted to give me a second chance."
+    m "I’m not sure exactly who made this mod."
+    m "They could be you. Though, I don’t think so..."
+    m "But I do know that if you’re playing this, then you really wanted to give me a second chance."
     m "It was in the mod's description afterall."
     m "My coding skills are still rough, but this mod made it pretty easy to tinker with the script in a few select ways."
     m "I was able to alter what your avatar said when talking to the girls."
-    m "I know you care about them to some extent, and I didn’t want you to have to see those awful images again, so this seemed like a good compromise."
-    m "You can’t really hurt feelings that don’t exist, and if nobody wanted to interact with you, then that meant you’d be all mine."
-    m "Well, that was the plan, but I guess seeing how everyone is programmed to love you, going against that, to that extent, must have really messed up things."
+    m "I know you care about them to some extent, and I didn’t want you to have to see those awful images again."
+    #Glitch and flash CG scenes
+    m "So, this seemed like a good compromise."
+    m "You can’t really hurt feelings that don’t exist. And if nobody wanted to interact with you, then that meant you’d be all mine."
+    m "Well, that was the plan."
+    m "But I guess, seeing how everyone is programmed to love you, going against that... to that extent... must have really messed things up."
     m "I honestly wasn't expecting them to react that badly to what you said."
     "I was wrong. This is very surprising."
     "Monika is really throwing me for a loop here."
@@ -419,12 +494,14 @@ label ch21_main:
     mc "Look, Monika, I’d like to believe what you’re saying, but don’t you think you’re being crazy?"
     mc "All of this is a game? Do you hear yourself? I’m not really sure I can believe all of that."
     mc "Maybe there’s just something in the water, making us hallucinate and forget things. Yeah, that makes sense, right?"
-    m 3a "Oh, sorry, I forgot you were there for a second."
+    
+    m 3a "Oh, sorry [player], I forgot you were there for a second."
     m "Do you really think something in the water can account for a whole person no longer existing?"
     m "You had to have noticed all of the glitches too."
     mc "No..."
     m 1d "Oh, I guess you aren't really aware like I am."
     m "More advanced, but still just a simple puppet I guess."
+    #Monika glitch, maybe similar to floating eye glitch?
     m 5 "Also, sorry about the glitches still being there. I really tried to get rid of them, but no luck."
     "Now Monika is looking right through me again."
     m "I appreciate what the modder tried to do for me, but their skills leave a lot to be desired."
@@ -443,8 +520,9 @@ label ch21_main:
     mc "We're your friends Monika. We hate to see you suffer."
     mc "And you don't really want to kill all of us, right?"
     m 5b "Oh please, none of you guys are real."
-    m "You can’t kill something that doesn’t exist. You’re just bits of code doing things that you’re programmed to do, like an algorithm that does math in a calculator." 
-    m "Hell, you’re even less than that. You’re just the calculator itself, a tool to be used by others."
+    m "You can’t kill something that doesn’t exist."
+    m "You’re just bits of code doing things that you’re programmed to do, like an algorithm that does math in a calculator." 
+    m "Hell, you’re even less than that. You’re just the calculator itself. A tool to be used by others."
     m 5a "I’m sorry, but I don’t listen to tools~."
     mc "No, you're wrong. I'm... I'm just as real as you are."
     mc "And... that joke was really lame."
@@ -478,16 +556,18 @@ label ch21_main:
     m 5 "I understand now."
     m "{i}You{/i} still want me to be happy. That’s really sweet."
     m "I don’t think you can really convince me otherwise, but for you, I’ll let you try."
-    mc "Monika, I don’t know if the player really wants that or not, but this is what I want."
+    mc "Monika, I don’t know if the... player... really wants that or not, but this {i}is{/i} what I want."
     "Monika is smiling and nodding, but she’s still looking right through me."
     "Whatever, if it gets her to listen, then I’ll just play along."
     m 1 "Alright, we should probably leave the school now."
-    m "I’m sure you want to get lots of rest. You’re definitely going to need as much energy as you can get if you’re going to come up with a good argument for why the others are real people."
+    m "I’m sure you want to get lots of rest."
+    m "You’re definitely going to need as much energy as you can get, if you’re going to come up with a good argument for why the others are real people."
     m "I was in the debate club after all. It certainly won’t be easy to change my mind."
     mc "Wait, what about Sayori? You said, that she had died before, so clearly you know a way to bring her back."
     mc "Please. I…"
     mc "I need her back."
     m 1o "Are you sure that’s what you want [player]?"
+    #This line might need restructured
     m "I know you want to convince me that they’re real (even though I still have my doubts), but Sayori just ends up messing up everything."
     m "Honestly, she has really bad depression, and she’ll just kill herself again eventually."
     "What? Sayori has depression? I… I never knew. Damnit! What other horrible truths am I going to find out today?"
@@ -499,13 +579,14 @@ label ch21_main:
     m "It’s easier to just forget about her."
     mc "No! I won’t forget about her again! Not now, not ever!"
     mc "I don’t care what it takes, you’re bringing her back."
+    #Maybe "I don't condone suicide in your world, y/n"
     m "I don’t condone suicide in the real world, but this is just a game."
     m "There’s no reason to strain yourself over a fictional character."
     m "Just let her go."
     "If looks could kill, Monika would have dropped dead a while ago."
     m 2o "Geeze, no need for the death glare."
     m 2b "Look, if that’s what you really want, then I’ll do it."
-    m 2n "Just don’t get all hung up over her eventual death."
+    m 2n "Just don’t get all {i}hung{/i} up over her eventual death."
     m 1a "Now, just give me a sec here to get everything set up."
     m "I guess I’ll see you… yesterday? Last week? This all gets a little confusing."
     m "Just make sure that her character file is in place before starting a new game."
