@@ -88,29 +88,26 @@ label ch5_main:
 
     "Eventually I woke up. I don’t think I slept well, but I’m not sure." 
     "I hadn’t set my alarm, so I woke up later than I normally would."
-    #add fade to transition
-    scene bg kitchen
+    scene bg kitchen with wipeleft_scene
     "I didn’t care. I grabbed a quick breakfast, and walked outside. I was still wearing my clothes from yesterday."
-    #add fade to transition
-    scene bg residential_day
+    scene bg residential_day with wipeleft_scene
     "I waited for Sayori, but she never came to greet me. I hoped that she had gone to school already, without me." 
     "Unfortunately, I didn’t have the luxury of waiting there forever, and had to make my way to school as well."
 
     scene bg corridor with wipeleft_scene
-    show monika 5 zorder 2 at t11
-    #update Monika's poses in this block
-    m "Hey there [player]!"
-    m "How's it going?"
-    m "You're kind of late today."
+    show monika 2b zorder 2 at t11
+    m "Hey there [player]! How's it going?"
+    m 2e "You're kind of late today."
     mc "I'm... okay..."
-    m 1d "No Sayori? I guess you really left her hanging this morning."
-    m "Not used to seeing that so early in the week..."
+    m 1l "No Sayori? I guess you really left her hanging this morning."
+    m 1m "Not used to seeing that so early in the week..."
     mc "Huh?"
     m 1k "I guess she's going to sleep forever at this rate."
-    m 4b "I thought things would be different this time, but I guess she's just a lost cause."
-    m "Hey... No matter what happens, don't blame yourself, okay?"
-    m "It's not your fault."
-    show monika 4a
+    m 4j "I thought things would be different this time, but I guess she's just a lost cause."
+    m 2i "Hey... No matter what happens, don't blame yourself, okay?"
+    m 2g "It's not your fault."
+    show monika 2h zorder 1 at thide
+    hide monika 
     "Something about what Monika said sent a shiver down my spine. A terror that I couldn’t quite explain started to grip me." 
     "I pulled out my phone to try and get ahold of Sayori, to make sure that she was okay." 
     "A simple text should do it." 

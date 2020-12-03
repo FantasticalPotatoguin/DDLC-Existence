@@ -457,3 +457,6 @@ install/renpy/vc_version.py
 install/renpy/warp.py
 install/errors.txt
 install/traceback.txt
+*.ogg
+install/game/rpatool.py
+rpatool

@@ -61,15 +61,18 @@ label ch20_main2:
     #Change Monika poses here? Is this section original game code?
     mc "What did you come in here for, anyway?"
     m 1i "Let me just cut to the chase." 
-    m "I've been looking for new members for my club, and I think you'd fit right in."
+    m 3b "I've been looking for new members for my club, and I think you'd fit right in."
+    show monika 3a zorder 2 at t11
     mc "...You're in the debate club, right?"
-    m 5 "Ahaha, about that..."
-    m "I actually quit the debate club."
+    m 1l "Ahaha, about that..."
+    m 1n "I actually quit the debate club."
+    show monika 1m zorder 2 at t11
     mc "Really? You quit?"
+    show monika 1n zorder 2 at t11
     m "Yeah..."
     m 2e "To be honest, I can't stand all of the politics around the major clubs."
     m 1b "That's why I decided to make my own club."
-    m "A literature club!{nw}"
+    m 5a "A literature club!{nw}"
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
@@ -80,43 +83,47 @@ label ch20_main2:
     m "A literature club!{fast}"
     window auto
     mc "Literature...?"
-    # Make Monika self-awarely offended?
+    show monika 5b
     "That sounds kind of...dull?"
     mc "How many members do you have so far?"
-    #poses can definitely be more dynamic through here
-    m 5 "Um..."
-    m "Ahaha..."
-    m "It's kind of embarrassing, but there are only three of us so far."
-    m 1 "That's why I'd really appreciate it if you decided to join us."
-    m 2 "We need at least four members to become an official club."
-    m "I know being part of a literature club sounds boring."
-    m 3d "But it's really not boring at all, you know!"
-    m "Literature can be anything. Reading, writing, poetry..."
+    
+    m 2n "Um..."
+    m 2m "Ahaha..."
+    m 2l "It's kind of embarrassing, but there are only three of us so far."
+    m 1j "That's why I'd really appreciate it if you decided to join us."
+    m 4b "We need at least four members to become an official club."
+    m 2m"I know being part of a literature club sounds boring."
+    m 2k "But it's really not boring at all, you know!"
+    m 2a"Literature can be anything. Reading, writing, poetry..."
     m 3e "I mean, one of my members even keeps her manga collection in the clubroom..."
     mc "Wait...really?"
     m 2k "Yeah, it's funny, right?"
     m 2e "She always insists that manga is literature, too."
     "...Did Monika say \"she\"?"
     "Hmm..."
-    m 1a "Hey, [player]..."
-    m "I know we don't really know each other all that well, but I just know that my club is the club for you."
-    m "I would appreciate it so, so much if you would join."
-    m "Please?"
+    m 1e "Hey, [player]..."
+    m 1d "I know we don't really know each other all that well, but I just know that my club is the club for you."
+    m 2a "I would appreciate it so, so much if you would join."
+    m 2e "Please?"
     mc "Um..."
     "Well, I guess I have no reason to refuse..."
+    show monika 2j zorder 2 at t11
     "Besides, how could I ever refuse someone like Monika?"
     mc "Sure, I guess I could check it out."
     m 1k "Aah, awesome!"
     m 1b "You're really sweet, [player], you know that?"
+    show monika 1a zorder 2 at t11
     mc "I-It's nothing, really..."
     mc "Like you said, it just feels right."
     mc "I don't know if you believe in fate, but it kinda feels like that."
-    # Are italics possible for these quiet lines to distinguish? 
-    m "(Yeah, I guess free will would be a foreign concept for you.)"
+    m "{i}(Yeah, I guess free will would be a foreign concept for you.){/i}"
     mc "Hmm?"
-    m "Oh, nothing! I'm just musing to myself."
-    m 1a "Shall we go, then?"
+    m 1l "Oh, nothing! I'm just musing to myself."
+    m 1b "Shall we go, then?"
+    show monika 1a zorder 2 at t11
     mc "Yes, let's."
+    show monika 1j zorder 2 at thide
+    hide monika
 
     stop music fadeout 2.0
 
