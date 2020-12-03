@@ -32,6 +32,7 @@ label ch40_main:
                 
     $ restore_all_characters()
     "Wait, did it work? I'm outside my house."
+    #Expressions through here are top priority, maybe cut to CG scene with hug? 
     play music t2
     s "Heeey!"
     "It's... It's..."
@@ -55,9 +56,11 @@ label ch40_main:
     s 1b "I'm surprised you missed me so much."
     s 2b "It's only been a few months..."
     mc "I... had an awful dream."
+    #sayori face changes slowly as player goes on
     mc "I did something horrible, or said something horrible to you."
     mc "I'm not sure what exactly I did, but..."
     mc "I hurt you so bad, and you... you..."
+    #Sayori react strongly
     mc "Went and killed yourself."
     s 2n "Huh?"
     mc "It was awful..."
@@ -66,6 +69,7 @@ label ch40_main:
     play music t9 fadein 2.0
     s "It was just a nightmare."
     "I really wish that were true. I really do."
+    #Expressions still badly needed
     s "I'm right here safe and sound."
     mc "Yeah..."
     s "Besides, I'm not going to kill myself over something like that."
@@ -76,20 +80,27 @@ label ch40_main:
     "Well, I think so anyway. Why else would I be the only guy in a club full of cute girls?"
     "Wait, does that mean Sayori was supposed to be a romance option too?"
     "I... don't want to think about that right now."
+    #Change this pose
     s 5d "By the way, [player]..."
     s "Have you decided on a club to join yet?"
     mc "A club?"
+    #Sayori react to "yes, I have"
     mc "Actually, yes, I have."
+    #More surprised, less sad
     s 1k "Huh? Oh..."
     s "Which one?"
+    #Sayori annoyed
     mc "I'll tell you later."
     s 1h "Oh, come on [player]."
     s "It's not nice to keep secrets."
     mc "Haha."
+    #React
     mc "You're like a big child sometimes."
     s 5d "Hey, that's mean. Meanie..."
+    #Surprise
     mc "Aww, but I like that about you."
     s 4m "What?"
+    #This pose is probably fine
     s 4y "Geeze, what are you saying?"
     "I probably look silly with this big grin on my face, but I can't help it."
     "Bantering with Sayori like this..."
@@ -103,16 +114,20 @@ label ch40_main:
     s "Hmm?"
     mc "I'm sorry for neglecting you."
     mc "Dream or not, it made me realize just how much I've taken our friendship for granted."
+    #Sayori's face needs to not be a statue
     s "..."
     s "It's not your fault."
     s "I'm the one who started sleeping in more and more."
     s "I never blamed you for leaving me behind."
     s 1a "I know you have much more important things to be doing than hanging out with me."
+    #Sayori blush
     mc "Sayori, almost nothing in my life is more important than you."
     s "..."
+    #Sayori blush harder
     mc "I promise you, I'll never take our friendship for granted again."
     s "Okay..."
     mc "I'll see you later, alright?"
+    #Sayori small smile maybe? 
     s "Uhuh..."
     "I give Sayori a smile before I leave for class."
     
@@ -146,6 +161,7 @@ label ch40_main:
     show yuri 3m at t11 zorder 2
     "Oh, I didn't know Yuri had the same lunch block as me."
     mc "Hey, how's it going?"
+    #Yuri expressionsssss. Not too bad through here but need to react to things more
     y 3n "Huh?"
     y 3o "I'm sorry, are you talking to me?"
     mc "Yeah..."
@@ -159,6 +175,7 @@ label ch40_main:
     mc "Sorry. I know I'm coming across as strange. I'll leave you alone now."
     y 3n "Oh, no! You're fine!"
     y "You were just trying to be nice. I'm the one that made things awkward."
+    #Hate this pose here
     y 4b "I'm sorry. I'm sure I've made a horrible first impression."
     mc "Hey, no, you're fine. I don't think badly of you or anything."
     y "..."
@@ -174,11 +191,14 @@ label ch40_main:
     y "I actually just finished my book, so I'll probably just focus on eating for the rest of lunch."
     mc "Would you mind if I joined you?"
     y 3p "Huh!?"
+    #Blush maybe?
     y "You... want to eat with me?"
     mc "Sure, if you don't mind. Though, I don't want to take away from your quiet time."
     y 3v "The peace and quiet is nice, though I suppose it can get a bit lonely..."
     mc "I usually just eat by myself too."
+    #Glance at player
     mc "So, why not be lonely together, huh?"
+    #Different pose
     y 4c "Umm... I guess that would be okay."
     "I went and grabbed my lunch, and took a seat next to Yuri."
     y 2u "..."
@@ -186,15 +206,18 @@ label ch40_main:
     "It was a bit awkward to be honest..."
     "Soon, lunch came to an end."
     mc "Well, this was nice."
+    #Different face
     y "Was it? I know I didn't have much to say. Sorry..."
     mc "Nah, you're fine. Sure, it was quiet, but it was still nice."
     mc "Certainly better than eating alone."
     y 3v "..."
+    #Surprised face
     mc "We should do this again."
     y 3n "Huh? But, why?"
     y 4b "I know I made very poor company..."
     mc "I mean, I know we didn't have much to say, but I still enjoyed eating with you."
     mc "Quiet or not, you made good company, trust me."
+    #This one is fine
     y 4a "...okay."
     mc "I'll see you later, Yuri."
     stop music fadeout 2.0
@@ -211,7 +234,9 @@ label ch40_main:
     "Hmm... How do I want to go about doing this?"
     play music t3
     scene bg club_day with wipeleft
-    "Hello, beautiful ladies! I'm here to write the way into your hearts."
+
+    #Black and white or sepia, maybe vignette/ripple in to show it's imagination
+    mc "Hello, beautiful ladies! I'm here to write the way into your hearts."
     show natsuki 4x at t11 zorder 2
     n "Yeah, no, I don't think so."
     n 4o "I suggest you leave now while you can still walk out."
@@ -219,6 +244,8 @@ label ch40_main:
     scene bg corridor
     "Well, that was a stupid idea."
     "I guess I'll just go in and see what happens."
+
+
     scene bg club_day
     with wipeleft
     play music t3
@@ -227,50 +254,65 @@ label ch40_main:
     s "Huh? [player], what are you doing here?"
     hide sayori
     show yuri 1f zorder 2 at t11
-    y "Oh, so {i}you're{/i} the [player] Sayori is always talking about!"
+    y "Oh, so {i}you're{/i} the [player] that Sayori is always talking about!"
     y 1a "Sayori always says nice things about you."
-    y "(I can certainly see why.)"
+    y "{i}(I can certainly see why.){/i}"
+    #Yuri mildly surprised
     mc "Well, I'm here to join the club."
     show yuri zorder 2 at t22
     show natsuki 4c zorder 2 at t21
     n "Seriously? A boy?"
+    #Natsuki disgusted
     n "There goes the atmosphere..."
     show yuri zorder 2 at t33
     show natsuki zorder 2 at t32
     show monika 1k zorder 2 at t31
     m "Ah, [player]! What a nice surprise!"
+    #Monika eyes open
     m "Welcome to the club!"
     show monika 1a
     mc "..."
     "I really shouldn't be surprised at this point, but..."
     "This club..."
+    #Have Monika's face respond
     "{i}...is full of incredibly cute girls!!{/i}"
     "Hehe. Saying that never gets old."
 
     show monika zorder 1 at thide
-    show yuri zorder 1 at thide
-    show natsuki zorder 2 at f32
     hide monika
+    show yuri zorder 1 at thide 
     hide yuri
 
+    show natsuki zorder 2 at f32
+    
+   
+
+    #Natsuki different face
     n 2c "What are you looking at?"
     n "If you want to say something, say it."
     mc "S-Sorry..."
     show natsuki zorder 2 at t32
     show yuri 2l zorder 2 at f33
+    #Yuri different face
     y "Natsuki..."
-    $ n_name = 'Natsuki'
     show yuri zorder 2 at t33
     show natsuki zorder 2 at f32
     n 5s "Hmph."
     show natsuki zorder 2 at t32
     show sayori 2o zorder 2 at f31
+    #Sayori more hopeful, less confused
     s "So, wait, you're here to join the club?"
-    mc "Well, yeah. You said I should join a club, and which one would be better than the one my best friend's a part of?"
+    #Sayori happy
+    #Other girls respond to news
+    mc "Well, yeah. You said I should join a club, and which one would be better than the one my best friend is a part of?"
+    #Sayori hop
     s 4r "Eeeeehhh! I'm so excited!"
+    #Sayori look at player
     s "You're going to have so much fun here."
     show natsuki 2z zorder 2 at t32
+    #Natsuki more subtle smile
     n "Well, at least the cupcakes won't go to waste now."
+    #fix hide transition
     hide sayori
     hide natsuki
     hide yuri
@@ -281,17 +323,25 @@ label ch40_main:
     "It's pretty tiring to go through the same day again and again, especially if everything is exactly the same each time."
     "Eventually, the day comes to an end, and everybody starts to leave."
     show sayori 1a at t21 zorder 2
-    s "Hey, [player], since we're already here, do you want to walk home together?"
+    #Sayori fingers together, looking away
+    s "Hey, [player], since we're already here..."
+    #Sayori fingers together, look at player
+    s "Do you want to walk home together?"
     "That's right - Sayori and I never walk home together anymore because she always stayed after school for clubs."
     mc "Of course, Sayori."
     s 4q "Yaay~"
     show monika 1a at t22 zorder 2
     m "You two have fun~"
+    #Monika change pose
     m "Oh, and [player]?"
     "Monika gets close to me and whispers into my ear."
+    #Fade Sayori, zoom in on Monika
     m 5 "Don't think I've forgotten what you've promised me."
-    m "We will talk more tomorrow."
+    #Zoom back out, show Sayori again
+
+    m "We'll talk more tomorrow!"
     "With that, Monika waves us bye as we leave."
+    #Hide monika before scene wipe
     scene bg residential_day
     with wipeleft_scene
     "The whole way, what Monika said lingers in my mind."
@@ -302,24 +352,31 @@ label ch40_main:
     s "So, what are you thinking about?"
     mc "Huh?"
     s "You seemed really deep in thought."
+    #Sayori jealousish
     s 1x "Thinking about all of the cute girls in the club~?"
     mc "What are you trying to get at?"
     s 1d "Come on [player]. I saw how Monika whispered into your ear before we left. You already know each other too."
     mc "Sayori, there's nothing between me and Monika. That was just... something club related."
     s 2l "What about you and Yuri then? You certainly seemed familiar with each other."
+    #Sayori getting more jealousish
     s "You and Natsuki have a lot in common too. Plus, she's super cute."
+    #Different expressions for Sayori
     s 3n "Oh, don't tell her I said that."
-    mc "Yuri and I just happend to run into each other during lunch. That's why we were familiar with each other."
+    mc "Yuri and I just happened to run into each other during lunch. That's why we were \'familiar\' with each other."
     mc "Natsuki and I may have things in common, but that doesn't really mean anything either."
     s 3l "If you say so..."
+    #Sayori surprise
     mc "Come on Sayori, there's no need to be jealous."
     s 2h "Huh?"
     mc "I'm walking home with you, aren't I?"
     s 1k "That's... not really what I mean."
+    #Sayori surprise blush
     mc "Besides, you're way cuter than Natsuki."
+    #Blush deepens
     s 1x "Now you're just being silly."
     mc "Uh oh. I guess you've rubbed off on me too much."
     s 5c "Meanie..."
+    #Change how this pose transitions out
     "I give Sayori's hair a little ruffle."
     mc "Well, I'll see you tomorrow Sayori."
     s 2r "See ya!"
@@ -331,7 +388,7 @@ label ch40_main:
     call ch1_main
     
     return
-    
+    #Top Priority: See if this code ever gets used or if it's just leftover
     
     $ if all(clear for clear in persistent.clear): persistent.clearall = True
     if persistent.clearall:

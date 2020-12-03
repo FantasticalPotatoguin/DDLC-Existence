@@ -596,7 +596,7 @@ label ch21_main:
     return
     
     
-    
+    #Does this block actually get referenced anywhere, or is it leftover? 
     menu:
         "So, of course that's going to be...!"
         "Natsuki.":
@@ -611,7 +611,7 @@ label ch21_main:
 
    
 
-
+#I think from here on might be unused? 
 label ch21_end:
     stop music fadeout 1.0
     scene bg club_day2

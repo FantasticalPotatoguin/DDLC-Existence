@@ -16,24 +16,30 @@ label ch1_main:
     show yuri 1a zorder 2 at t11
     mc "Hey there Yuri."
     y 1t "Oh, hello there [player]."
+    #Yuri more surprised
     mc "Everything good? I didn't see you during lunch, so I was wondering if you maybe weren't feeling well."
     y 4a "You were looking for me?"
     mc "Well, yeah. I did say we should eat lunch together again."
     mc "Err, sorry if that was too presumptuous of me."
+    #Different face for NO
     y 2n "No!"
     y 2o "Ohh, I said that way too loud..."
     y 3k "Come on Yuri, get a grip."
     "I wait a bit for Yuri to collect herself."
+    #Yuri's face needs to change during this scene
     y "I'm sorry. I was otherwise occupied during lunch today."
     y "I wouldn't mind eating with you tomorrow, though. It would be quite pleasant actually."
     y 4a "Err, that is, only if you want to."
     y 4b "I don't want you to feel obligated to spend time with me."
     mc "Sounds good to me. Like I said, I enjoy your company."
+    #Yuri surprised
     mc "Besides, we're friends, aren't we?"
     y 4a "You really consider me as a friend?"
     mc "Yeah, of course. Why wouldn't I?"
+    #Don't like this Yuri face
     y 4d "..."
     show yuri zorder 2 at t21
+    #Natsuki more angry
     show natsuki 4t zorder 2 at f22
     n "Hey, this is the Literature Club, {i}not{/i} the Flirting Club."
     show natsuki zorder 2 at t22
@@ -45,10 +51,12 @@ label ch1_main:
     show natsuki 5y zorder 2 at f22
     n "Uh huh, sure it isn't."
     n 5h "Look, you better take this club seriously."
-    n 5f "If you think you can just come in and make sweet talk to us all day, then you've got another think coming."
+    n 5f "If you think you can just come in and make sweet talk to us all day, then you've got another thing coming."
     show natsuki zorder 2 at t22
+    #Natsuki close mouth
     mc "Natsuki, seriously, it's not like that."
     show natsuki zorder 2 at f22
+    #This is a blush pose and she shouldn't be blushing here
     n 5h "Sure, sure. But I'm going to be keeping a close eye on you."
     show natsuki 5i zorder 2 at thide
     hide natsuki
@@ -58,25 +66,34 @@ label ch1_main:
     "Now there's an awkward air between Yuri and me."
     "Thankfully, Sayori seems to have come over to save the day."
     show yuri zorder 3 at f32
+    #Yuri can snap out of blushing a little here
     show sayori 2x zorder 3 at f31
     s "Don't worry, guys~"
     s "[player] just likes to be nice and helpful."
+    #Yuri's eyes open a little more
     s "He helps me with busywork without me even asking."
+    #Even stronger response from Yuri
     s "Like cooking, cleaning my room..."
     show sayori 2a zorder 2 at t31
     show yuri zorder 3 at f32
+    #Yuri ogling player at this 
     y 2m "How dependable..."
     show yuri zorder 2 at t32
+    #Sayori mildly offended/embarassed
     mc "Sayori, that's because your room is so messy it's distracting."
+    #Sayori blush
     mc "And you almost set your house on fire once."
-    show sayori at s21
+    show sayori at s31
     s 5 "Is that so... Ehehe..."
+    #Sayori more neutral pose
     "Crap, I hope that didn't come across as too mean."
     show yuri zorder 3 at f32
     y 1s "You two are really good friends, aren't you?"
+    #Yuri look away cuz she's a hoe and wants in on your relationship dynamic
     y "I might be a little jealous..."
     show yuri zorder 2 at t32
     show sayori zorder 3 at f31
+    #Sayori should look sadder here
     s 1 "How come? You and [player] can become really good friends too!"
     s "Maybe even best friends."
     show sayori zorder 2 at t31
@@ -85,6 +102,7 @@ label ch1_main:
     show yuri zorder 2 at t32
     mc "S-Sayori--"
     show sayori zorder 3 at f31
+    #Sayori sadder
     s "Hmm?"
     show sayori zorder 2 at t31
     mc "..."
@@ -94,7 +112,9 @@ label ch1_main:
     show sayori zorder 2 at t31
     show yuri zorder 3 at f32
     y 3n "W-Wait! Sayori..."
+    #Yuri mouth close
     show yuri zorder 2 at t32
+    
     mc "Eh? Me?"
     "Is it that book again?"
     show yuri zorder 3 at f32
@@ -103,6 +123,7 @@ label ch1_main:
     show sayori zorder 3 at f31
     s 4r "Don't be shy~"
     show sayori zorder 2 at t31
+    #Sayori mouth close
     show yuri zorder 3 at f32
     y "It's really nothing..."
     show yuri zorder 2 at t32
@@ -110,6 +131,7 @@ label ch1_main:
     show yuri zorder 3 at f32
     y 4c "N-Never mind!"
     y "Sayori made it sound like a big deal when it's really not..."
+
     y "Uuuuh, what do I do..."
     show yuri zorder 2 at t32
     show sayori zorder 3 at f31
@@ -120,7 +142,9 @@ label ch1_main:
     "Why does it feel like Sayori is trying to push me and Yuri closer together?"
     "Still, I better play dumb for now and try to calm Yuri down."
     mc "Hey, don't worry about it."
+    #Yuri come out of blushing slowly
     mc "First of all, I wasn't expecting anything in the first place."
+
     mc "So any nice gesture from you is a pleasant surprise."
     mc "It'll make me happy no matter what."
     y 3v "I-Is that so..."
