@@ -141,37 +141,48 @@ label ch20_main2:
 
     if renpy.random.randint(0, 2) == 0:
         show monika g1 at l31
+        show monika g1 at f31
     else:
         show monika 3b at l31
+        show monika 3b at f31
 
     #shocker, more poses to make fancy so that stuff doesn't mismatch
     m "I'm back~!"
-    m "And I brought a guest with me!"
-    show yuri 2t zorder 2 at t33
+    m 3k "And I brought a guest with me!"
+    show monika 3k zorder 2 at t31
+    show yuri 2e zorder 2 at f33
     if not config.skipping:
         show screen invert(0.15, 0.3)
     y "Eh?"
-    y "Oh, this must be the new member you were talking about."
-    show natsuki 4c zorder 2 at t32
+    y 2t "Oh, this must be the new member you were talking about."
+    show yuri 2s zorder 2 at t33
+    show natsuki 4e zorder 2 at f32
     n "Seriously? You brought a boy?"
-    n "Way to kill the atmosphere."
-    show monika 3m zorder 2 at f31
+    n 4q "Way to kill the atmosphere."
+    show natsuki 4s zorder 2 at t32
+    show monika 3n zorder 2 at f31
     m "Don't be mean, Natsuki..."
     m 3b "...But anyway, welcome to the club, [player]!"
-    show monika 3a zorder 2 at t31
+    show monika 3e zorder 2 at t31
     mc "..."
     "All words escape me in this situation."
     "This club..."
+    show monika 1j zorder 2 at h31
     "{i}...is full of incredibly cute girls!!{/i}"
 
-    show natsuki zorder 3 at f32
-    n 5c "So, let me guess..."
-    n "You're Monika's boyfriend, right?"
-    show natsuki zorder 2 at t32
+    show natsuki 5c zorder 3 at f32
+    n "So, let me guess..."
+    show yuri 2e zorder 2 at t33
+    show monika 1d zorder 2 at t31
+    n 5k "You're Monika's boyfriend, right?"
+    show natsuki 5a zorder 2 at t32
     mc "Wha--"
+    show monika 2h zorder 2 at t31
     mc "No, I'm not!"
-    show yuri zorder 2 at f33
-    y 2l "Natsuki..."
+    show monika 2q zorder 2 at t31
+    show yuri 2q zorder 2 at f33
+    y  "Natsuki..."
+    show yuri 2u zorder 2 at t33
     $ n_name = 'Natsuki'
     "The girl with the sour attitude, whose name is apparently Natsuki, is one I don't recognize."
     "Her small figure makes me think she's probably a first-year."
