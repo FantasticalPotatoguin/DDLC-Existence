@@ -25,6 +25,25 @@ init python:
         import os
         try: os.remove(config.basedir + "/characters/" + name + ".chr")
         except: pass
+    def restore_all_characters():
+        try: renpy.file("../characters/monika.chr")
+        except: open(config.basedir + "/characters/monika.chr", "wb").write(renpy.file("monika.chr").read())
+        try: renpy.file("../characters/natsuki.chr")
+        except: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
+        try: renpy.file("../characters/yuri.chr")
+        except: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
+        try: renpy.file("../characters/sayori.chr")
+        except: open(config.basedir + "/characters/sayori.chr", "wb").write(renpy.file("sayori.chr").read())
+    def restore_relevant_characters():
+        restore_all_characters()
+        if persistent.playthrough == 1 or persistent.playthrough == 2:
+            delete_character("sayori")
+        elif persistent.playthrough == 3:
+            delete_character("sayori")
+            delete_character("natsuki")
+            delete_character("yuri")
+        elif persistent.playthrough == 4:
+            delete_character("monika")
     def pause(time=None):
         if not time:
             renpy.ui.saybehavior(afm=" ")
@@ -38,46 +57,46 @@ init python:
 
 # Music
 define audio.t1 = "mod_assets/bgm/main_menu.mp3"  #Main theme (title)
-define audio.t2 = "<loop 4.499>mod_assets/bgm/2.ogg"   #Sayori theme
-define audio.t2g = "mod_assets/bgm/2g.ogg"
-define audio.t2g2 = "<from 4.499 loop 4.499>mod_assets/bgm/2.ogg"
-define audio.t2g3 = "<loop 4.492>mod_assets/bgm/2g2.ogg"
-define audio.t3 = "<loop 4.618>mod_assets/bgm/3.ogg"   #Main theme (in-game)
-define audio.t3g = "<to 15.255>mod_assets/bgm/3g.ogg"
-define audio.t3g2 = "<from 15.255 loop 4.618>mod_assets/bgm/3.ogg"
-define audio.t3g3 = "<loop 4.618>mod_assets/bgm/3g2.ogg"
-define audio.t3m = "<loop 4.618>mod_assets/bgm/3.ogg"
-define audio.t4 = "<loop 19.451>mod_assets/bgm/4.ogg"  #Poem minigame
-define audio.t4g = "<loop 1.000>mod_assets/bgm/4g.ogg"
-define audio.t5 = "<loop 4.444>mod_assets/bgm/5.ogg"   #Sharing poems
-define audio.t5b = "<loop 4.444>mod_assets/bgm/5.ogg"
-define audio.t5c = "<loop 4.444>mod_assets/bgm/5.ogg"
-define audio.t6 = "<loop 10.893>mod_assets/bgm/6.ogg"  #Yuri/Natsuki theme
-define audio.t6g = "<loop 10.893>mod_assets/bgm/6g.ogg"
-define audio.t6r = "<to 39.817 loop 0>mod_assets/bgm/6r.ogg"
-define audio.t6s = "<loop 43.572>mod_assets/bgm/6s.ogg"
-define audio.t7 = "<loop 2.291>mod_assets/bgm/7.ogg"   #Causing trouble
-define audio.t7a = "<loop 4.316 to 12.453>mod_assets/bgm/7.ogg"
-define audio.t7g = "<loop 31.880>mod_assets/bgm/7g.ogg"
-define audio.t8 = "<loop 9.938>mod_assets/bgm/8.ogg"   #Trouble resolved
-define audio.t9 = "<loop 3.172>mod_assets/bgm/9.ogg"   #Emotional
-define audio.t9g = "<loop 1.532>mod_assets/bgm/9g.ogg" #207% speed
-define audio.t10 = "<loop 5.861>mod_assets/bgm/10.ogg"   #Confession
-define audio.t10y = "<loop 0>mod_assets/bgm/10-yuri.ogg"
-define audio.td = "<loop 36.782>mod_assets/bgm/d.ogg"
+define audio.t2 = "<loop 4.499>bgm/2.ogg"   #Sayori theme
+define audio.t2g = "bgm/2g.ogg"
+define audio.t2g2 = "<from 4.499 loop 4.499>bgm/2.ogg"
+define audio.t2g3 = "<loop 4.492>bgm/2g2.ogg"
+define audio.t3 = "<loop 4.618>bgm/3.ogg"   #Main theme (in-game)
+define audio.t3g = "<to 15.255>bgm/3g.ogg"
+define audio.t3g2 = "<from 15.255 loop 4.618>bgm/3.ogg"
+define audio.t3g3 = "<loop 4.618>bgm/3g2.ogg"
+define audio.t3m = "<loop 4.618>bgm/3.ogg"
+define audio.t4 = "<loop 19.451>bgm/4.ogg"  #Poem minigame
+define audio.t4g = "<loop 1.000>bgm/4g.ogg"
+define audio.t5 = "<loop 4.444>bgm/5.ogg"   #Sharing poems
+define audio.t5b = "<loop 4.444>bgm/5.ogg"
+define audio.t5c = "<loop 4.444>bgm/5.ogg"
+define audio.t6 = "<loop 10.893>bgm/6.ogg"  #Yuri/Natsuki theme
+define audio.t6g = "<loop 10.893>bgm/6g.ogg"
+define audio.t6r = "<to 39.817 loop 0>bgm/6r.ogg"
+define audio.t6s = "<loop 43.572>bgm/6s.ogg"
+define audio.t7 = "<loop 2.291>bgm/7.ogg"   #Causing trouble
+define audio.t7a = "<loop 4.316 to 12.453>bgm/7.ogg"
+define audio.t7g = "<loop 31.880>bgm/7g.ogg"
+define audio.t8 = "<loop 9.938>bgm/8.ogg"   #Trouble resolved
+define audio.t9 = "<loop 3.172>bgm/9.ogg"   #Emotional
+define audio.t9g = "<loop 1.532>bgm/9g.ogg" #207% speed
+define audio.t10 = "<loop 5.861>bgm/10.ogg"   #Confession
+define audio.t10y = "<loop 0>bgm/10-yuri.ogg"
+define audio.td = "<loop 36.782>bgm/d.ogg"
 
 define audio.tmonika = "<loop 4.444>bgm/5_monika.ogg"
 define audio.tsayori = "<loop 4.444>bgm/5_sayori.ogg"
 define audio.tnatsuki = "<loop 4.444>bgm/5_natsuki.ogg"
 define audio.tyuri = "<loop 4.444>bgm/5_yuri.ogg"
 
-define audio.m1 = "<loop 0>mod_assets/bgm/m1.ogg"
-define audio.mend = "<loop 6.424>mod_assets/bgm/monika-end.ogg"
+define audio.m1 = "<loop 0>bgm/m1.ogg"
+define audio.mend = "<loop 6.424>bgm/monika-end.ogg"
 
-define audio.ghostmenu = "<loop 0>mod_assets/bgm/ghostmenu.ogg"
-define audio.g1 = "<loop 0>mod_assets/bgm/g1.ogg"
-define audio.g2 = "<loop 0>mod_assets/bgm/g2.ogg"
-define audio.hb = "<loop 0>mod_assets/bgm/heartbeat.ogg"
+define audio.ghostmenu = "<loop 0>bgm/ghostmenu.ogg"
+define audio.g1 = "<loop 0>bgm/g1.ogg"
+define audio.g2 = "<loop 0>bgm/g2.ogg"
+define audio.hb = "<loop 0>bgm/heartbeat.ogg"
 
 define audio.closet_open = "sfx/closet-open.ogg"
 define audio.closet_close = "sfx/closet-close.ogg"
@@ -93,11 +112,11 @@ image splash = "bg/splash.png"
 image end:
     truecenter
     "mod_assets/gui/end.png"
-image bg residential_day = "mod_assets/images/bg/residential.png"
-image bg class_day = "mod_assets/images/bg/class.png"
-image bg corridor = "mod_assets/images/bg/corridor.png"
+image bg residential_day = "bg/residential.png"
+image bg class_day = "bg/class.png"
+image bg corridor = "bg/corridor.png"
 image bg club_evening = "mod_assets/images/bg/gloomyclub.png"
-image bg club_day = "mod_assets/images/bg/club.png"
+image bg club_day = "bg/club.png"
 image bg club_day2:
     choice:
         "bg club_day"
@@ -111,13 +130,13 @@ image bg club_day2:
         "bg club_day"
     choice:
         "bg/club-skill.png"
-image bg closet = "mod_assets/images/bg/closet.png"
-image bg bedroom = "mod_assets/images/bg/bedroom.png"
+image bg closet = "bg/closet.png"
+image bg bedroom = "bg/bedroom.png"
 image bg bedroom_night = "mod_assets/images/bg/bedroom_night.png"
-image bg sayori_bedroom = "mod_assets/images/bg/sayori_bedroom.png"
-image bg house = "mod_assets/images/bg/house.png"
+image bg sayori_bedroom = "bg/sayori_bedroom.png"
+image bg house = "bg/house.png"
 image bg house_night = "mod_assets/images/bg/house_night.png"
-image bg kitchen = "mod_assets/images/bg/kitchen.png"
+image bg kitchen = "bg/kitchen.png"
 image bg courtyard = "mod_assets/images/bg/courtyard.png"
 image bg living_room = "mod_assets/images/bg/living_room.png"
 image bg living_room_night = "mod_assets/images/bg/living_room_night.png"
@@ -134,13 +153,10 @@ image bg hospital_room = "mod_assets/images/bg/hospital_room.jpg"
 image bg yuri_kitchen = "mod_assets/images/bg/kitchen2.png"
 image bg bathroom = "mod_assets/images/bg/toilet_03.jpg"
 
-image cg1 = "mod_assets/images/cg/CG1.png"
-image cg5 = "mod_assets/images/cg/CG5.png"
+image bg notebook = "bg/notebook.png"
+image bg notebook-glitch = "bg/notebook-glitch.png"
 
-image bg notebook = "mod_assets/images/bg/notebook.png"
-image bg notebook-glitch = "mod_assets/images/bg/notebook-glitch.png"
-
-image bg glitch = LiveTile("mod_assets/images/bg/glitch.jpg")
+image bg glitch = LiveTile("bg/glitch.jpg")
 
 image glitch_color:
     ytile 3
@@ -610,10 +626,10 @@ image sayori 1o:
     "mod_assets/images/sayori/Live2D/Final Products/sayori_1o/sayori_1o_010.png"
     pause 5
     repeat
-image sayori 1p = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1l.png", (0, 0), "mod_assets/images/sayori/1r.png", (0, 0), "mod_assets/images/sayori/p.png")
-image sayori 1q = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1l.png", (0, 0), "mod_assets/images/sayori/1r.png", (0, 0), "mod_assets/images/sayori/q.png")
-image sayori 1r = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1l.png", (0, 0), "mod_assets/images/sayori/1r.png", (0, 0), "mod_assets/images/sayori/r.png")
-image sayori 1s = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1l.png", (0, 0), "mod_assets/images/sayori/1r.png", (0, 0), "mod_assets/images/sayori/s.png")
+image sayori 1p = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/p.png")
+image sayori 1q = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/q.png")
+image sayori 1r = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/r.png")
+image sayori 1s = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/s.png")
 image sayori 1t:
     "mod_assets/images/sayori/Live2D/Final Products/sayori_1t/sayori_1t_000.png"
     pause 0.01666
@@ -1143,10 +1159,10 @@ image sayori 2o:
     "mod_assets/images/sayori/Live2D/Final Products/sayori_2o/sayori_2o_010.png"
     pause 5
     repeat
-image sayori 2p = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1l.png", (0, 0), "mod_assets/images/sayori/2r.png", (0, 0), "mod_assets/images/sayori/p.png")
-image sayori 2q = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1l.png", (0, 0), "mod_assets/images/sayori/2r.png", (0, 0), "mod_assets/images/sayori/q.png")
-image sayori 2r = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1l.png", (0, 0), "mod_assets/images/sayori/2r.png", (0, 0), "mod_assets/images/sayori/r.png")
-image sayori 2s = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1l.png", (0, 0), "mod_assets/images/sayori/2r.png", (0, 0), "mod_assets/images/sayori/s.png")
+image sayori 2p = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/p.png")
+image sayori 2q = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/q.png")
+image sayori 2r = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/r.png")
+image sayori 2s = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/s.png")
 image sayori 2t:
     "mod_assets/images/sayori/Live2D/Final Products/sayori_2t/sayori_2t_000.png"
     pause 0.01666
@@ -1676,10 +1692,10 @@ image sayori 3o:
     "mod_assets/images/sayori/Live2D/Final Products/sayori_3o/sayori_3o_010.png"
     pause 5
     repeat
-image sayori 3p = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/2l.png", (0, 0), "mod_assets/images/sayori/1r.png", (0, 0), "mod_assets/images/sayori/p.png")
-image sayori 3q = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/2l.png", (0, 0), "mod_assets/images/sayori/1r.png", (0, 0), "mod_assets/images/sayori/q.png")
-image sayori 3r = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/2l.png", (0, 0), "mod_assets/images/sayori/1r.png", (0, 0), "mod_assets/images/sayori/r.png")
-image sayori 3s = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/2l.png", (0, 0), "mod_assets/images/sayori/1r.png", (0, 0), "mod_assets/images/sayori/s.png")
+image sayori 3p = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/p.png")
+image sayori 3q = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/q.png")
+image sayori 3r = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/r.png")
+image sayori 3s = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/s.png")
 image sayori 3t:
     "mod_assets/images/sayori/Live2D/Final Products/sayori_3t/sayori_3t_000.png"
     pause 0.01666
@@ -2209,10 +2225,10 @@ image sayori 4o:
     "mod_assets/images/sayori/Live2D/Final Products/sayori_4o/sayori_4o_010.png"
     pause 5
     repeat
-image sayori 4p = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/2l.png", (0, 0), "mod_assets/images/sayori/2r.png", (0, 0), "mod_assets/images/sayori/p.png")
-image sayori 4q = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/2l.png", (0, 0), "mod_assets/images/sayori/2r.png", (0, 0), "mod_assets/images/sayori/q.png")
-image sayori 4r = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/2l.png", (0, 0), "mod_assets/images/sayori/2r.png", (0, 0), "mod_assets/images/sayori/r.png")
-image sayori 4s = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/2l.png", (0, 0), "mod_assets/images/sayori/2r.png", (0, 0), "mod_assets/images/sayori/s.png")
+image sayori 4p = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/p.png")
+image sayori 4q = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/q.png")
+image sayori 4r = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/r.png")
+image sayori 4s = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/s.png")
 image sayori 4t:
     "mod_assets/images/sayori/Live2D/Final Products/sayori_4t/sayori_4t_000.png"
     pause 0.01666
@@ -2839,10 +2855,10 @@ image sayori 1bo:
     "mod_assets/images/sayori/Live2D/Final Products/sayori_1bo/sayori_1bo_010.png"
     pause 5
     repeat
-image sayori 1bp = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1bl.png", (0, 0), "mod_assets/images/sayori/1br.png", (0, 0), "mod_assets/images/sayori/p.png")
-image sayori 1bq = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1bl.png", (0, 0), "mod_assets/images/sayori/1br.png", (0, 0), "mod_assets/images/sayori/q.png")
-image sayori 1br = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1bl.png", (0, 0), "mod_assets/images/sayori/1br.png", (0, 0), "mod_assets/images/sayori/r.png")
-image sayori 1bs = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1bl.png", (0, 0), "mod_assets/images/sayori/1br.png", (0, 0), "mod_assets/images/sayori/s.png")
+image sayori 1bp = im.Composite((960, 960), (0, 0), "sayori/1bl.png", (0, 0), "sayori/1br.png", (0, 0), "sayori/p.png")
+image sayori 1bq = im.Composite((960, 960), (0, 0), "sayori/1bl.png", (0, 0), "sayori/1br.png", (0, 0), "sayori/q.png")
+image sayori 1br = im.Composite((960, 960), (0, 0), "sayori/1bl.png", (0, 0), "sayori/1br.png", (0, 0), "sayori/r.png")
+image sayori 1bs = im.Composite((960, 960), (0, 0), "sayori/1bl.png", (0, 0), "sayori/1br.png", (0, 0), "sayori/s.png")
 image sayori 1bt:
     "mod_assets/images/sayori/Live2D/Final Products/sayori_1bt/sayori_1bt_000.png"
     pause 0.01666
@@ -3348,10 +3364,10 @@ image sayori 2bo:
     "mod_assets/images/sayori/Live2D/Final Products/sayori_2bo/sayori_2bo_010.png"
     pause 5
     repeat
-image sayori 2bp = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/p.png")
-image sayori 2bq = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/q.png")
-image sayori 2br = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/r.png")
-image sayori 2bs = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/s.png")
+image sayori 2bp = im.Composite((960, 960), (0, 0), "sayori/1bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/p.png")
+image sayori 2bq = im.Composite((960, 960), (0, 0), "sayori/1bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/q.png")
+image sayori 2br = im.Composite((960, 960), (0, 0), "sayori/1bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/r.png")
+image sayori 2bs = im.Composite((960, 960), (0, 0), "sayori/1bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/s.png")
 image sayori 2bt:
     "mod_assets/images/sayori/Live2D/Final Products/sayori_2bt/sayori_2bt_000.png"
     pause 0.01666
@@ -3857,10 +3873,10 @@ image sayori 3bo:
     "mod_assets/images/sayori/Live2D/Final Products/sayori_3bo/sayori_3bo_010.png"
     pause 5
     repeat
-image sayori 3bp = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "mod_assets/images/sayori/1br.png", (0, 0), "sayori/p.png")
-image sayori 3bq = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "mod_assets/images/sayori/1br.png", (0, 0), "sayori/q.png")
-image sayori 3br = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "mod_assets/images/sayori/1br.png", (0, 0), "sayori/r.png")
-image sayori 3bs = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "mod_assets/images/sayori/1br.png", (0, 0), "sayori/s.png")
+image sayori 3bp = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "sayori/1br.png", (0, 0), "sayori/p.png")
+image sayori 3bq = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "sayori/1br.png", (0, 0), "sayori/q.png")
+image sayori 3br = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "sayori/1br.png", (0, 0), "sayori/r.png")
+image sayori 3bs = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "sayori/1br.png", (0, 0), "sayori/s.png")
 image sayori 3bt:
     "mod_assets/images/sayori/Live2D/Final Products/sayori_3bt/sayori_3bt_000.png"
     pause 0.01666
@@ -10451,8 +10467,8 @@ image yuri 1b:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1b/yuri_1b_010.png"
     pause 5
     repeat
-image yuri 1c = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/1r.png", (0, 0), "mod_assets/images/yuri/c.png")
-image yuri 1d = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/1r.png", (0, 0), "mod_assets/images/yuri/d.png")
+image yuri 1c = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/c.png")
+image yuri 1d = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/d.png")
 image yuri 1e:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1e/yuri_1e_000.png"
     pause 0.01666
@@ -10597,9 +10613,9 @@ image yuri 1j:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1j/yuri_1j_010.png"
     pause 5
     repeat
-image yuri 1k = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/1r.png", (0, 0), "mod_assets/images/yuri/k.png")
-image yuri 1l = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/1r.png", (0, 0), "mod_assets/images/yuri/l.png")
-image yuri 1m = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/1r.png", (0, 0), "mod_assets/images/yuri/m.png")
+image yuri 1k = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/k.png")
+image yuri 1l = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/l.png")
+image yuri 1m = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/m.png")
 image yuri 1n:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1n/yuri_1n_000.png"
     pause 0.01666
@@ -10816,15 +10832,15 @@ image yuri 1v:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1v/yuri_1v_010.png"
     pause 5
     repeat
-image yuri 1w = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/1r.png", (0, 0), "mod_assets/images/yuri/w.png")
+image yuri 1w = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/w.png")
 
-image yuri 1y1 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/1r.png", (0, 0), "mod_assets/images/yuri/y1.png")
-image yuri 1y2 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/1r.png", (0, 0), "mod_assets/images/yuri/y2.png")
-image yuri 1y3 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/1r.png", (0, 0), "mod_assets/images/yuri/y3.png")
-image yuri 1y4 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/1r.png", (0, 0), "mod_assets/images/yuri/y4.png")
-image yuri 1y5 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/1r.png", (0, 0), "mod_assets/images/yuri/y5.png")
-image yuri 1y6 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/1r.png", (0, 0), "mod_assets/images/yuri/y6.png")
-image yuri 1y7 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/1r.png", (0, 0), "mod_assets/images/yuri/y7.png")
+image yuri 1y1 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/y1.png")
+image yuri 1y2 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/y2.png")
+image yuri 1y3 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/y3.png")
+image yuri 1y4 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/y4.png")
+image yuri 1y5 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/y5.png")
+image yuri 1y6 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/y6.png")
+image yuri 1y7 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/y7.png")
 
 image yuri 2a:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2a/yuri_2a_000.png"
@@ -10874,8 +10890,8 @@ image yuri 2b:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2b/yuri_2b_010.png"
     pause 5
     repeat
-image yuri 2c = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/c.png")
-image yuri 2d = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/d.png")
+image yuri 2c = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/c.png")
+image yuri 2d = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/d.png")
 image yuri 2e:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2e/yuri_2e_000.png"
     pause 0.01666
@@ -11020,9 +11036,9 @@ image yuri 2j:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2j/yuri_2j_010.png"
     pause 5
     repeat
-image yuri 2k = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/k.png")
-image yuri 2l = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/l.png")
-image yuri 2m = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/m.png")
+image yuri 2k = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/k.png")
+image yuri 2l = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/l.png")
+image yuri 2m = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/m.png")
 image yuri 2n:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2n/yuri_2n_000.png"
     pause 0.01666
@@ -11239,15 +11255,15 @@ image yuri 2v:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2v/yuri_2v_010.png"
     pause 5
     repeat
-image yuri 2w = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/w.png")
+image yuri 2w = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/w.png")
 
-image yuri 2y1 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/y1.png")
-image yuri 2y2 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/y2.png")
-image yuri 2y3 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/y3.png")
-image yuri 2y4 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/y4.png")
-image yuri 2y5 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/y5.png")
-image yuri 2y6 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/y6.png")
-image yuri 2y7 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/y7.png")
+image yuri 2y1 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/y1.png")
+image yuri 2y2 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/y2.png")
+image yuri 2y3 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/y3.png")
+image yuri 2y4 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/y4.png")
+image yuri 2y5 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/y5.png")
+image yuri 2y6 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/y6.png")
+image yuri 2y7 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/y7.png")
 
 image yuri 3a:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_3a/yuri_3a_000.png"
@@ -11297,8 +11313,8 @@ image yuri 3b:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_3b/yuri_3b_010.png"
     pause 5
     repeat
-image yuri 3c = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/2l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/c.png")
-image yuri 3d = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/2l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/d.png")
+image yuri 3c = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/c.png")
+image yuri 3d = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/d.png")
 image yuri 3e:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_3e/yuri_3e_000.png"
     pause 0.01666
@@ -11443,9 +11459,9 @@ image yuri 3j:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_3j/yuri_3j_010.png"
     pause 5
     repeat
-image yuri 3k = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/2l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/k.png")
-image yuri 3l = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/2l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/l.png")
-image yuri 3m = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/2l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/m.png")
+image yuri 3k = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/k.png")
+image yuri 3l = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/l.png")
+image yuri 3m = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/m.png")
 image yuri 3n:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_3n/yuri_3n_000.png"
     pause 0.01666
@@ -11662,15 +11678,15 @@ image yuri 3v:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_3v/yuri_3v_010.png"
     pause 5
     repeat
-image yuri 3w = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/2l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/w.png")
+image yuri 3w = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/w.png")
 
-image yuri 3y1 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/2l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/y1.png")
-image yuri 3y2 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/2l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/y2.png")
-image yuri 3y3 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/2l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/y3.png")
-image yuri 3y4 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/2l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/y4.png")
-image yuri 3y5 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/2l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/y5.png")
-image yuri 3y6 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/2l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/y6.png")
-image yuri 3y7 = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/2l.png", (0, 0), "mod_assets/images/yuri/2r.png", (0, 0), "mod_assets/images/yuri/y7.png")
+image yuri 3y1 = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/y1.png")
+image yuri 3y2 = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/y2.png")
+image yuri 3y3 = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/y3.png")
+image yuri 3y4 = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/y4.png")
+image yuri 3y5 = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/y5.png")
+image yuri 3y6 = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/y6.png")
+image yuri 3y7 = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/y7.png")
 
 image yuri 4a:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_4a/yuri_4a_000.png"
@@ -11720,7 +11736,7 @@ image yuri 4b:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_4b/yuri_4b_010.png"
     pause 5
     repeat
-image yuri 4c = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/3.png", (0, 0), "mod_assets/images/yuri/c2.png")
+image yuri 4c = im.Composite((960, 960), (0, 0), "yuri/3.png", (0, 0), "yuri/c2.png")
 image yuri 4d:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_4d/yuri_4d_000.png"
     pause 0.01666
@@ -11745,7 +11761,7 @@ image yuri 4d:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_4d/yuri_4d_010.png"
     pause 5
     repeat
-image yuri 4e = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/3.png", (0, 0), "mod_assets/images/yuri/e2.png")
+image yuri 4e = im.Composite((960, 960), (0, 0), "yuri/3.png", (0, 0), "yuri/e2.png")
 
 image yuri 1ba:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1ba/yuri_1ba_000.png"
@@ -11795,8 +11811,8 @@ image yuri 1bb:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1bb/yuri_1bb_010.png"
     pause 5
     repeat
-image yuri 1bc = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/c.png", (0, 0), "mod_assets/images/yuri/1bl.png", (0, 0), "mod_assets/images/yuri/1br.png")
-image yuri 1bd = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/d.png", (0, 0), "mod_assets/images/yuri/1bl.png", (0, 0), "mod_assets/images/yuri/1br.png")
+image yuri 1bc = im.Composite((960, 960), (0, 0), "yuri/c.png", (0, 0), "yuri/1bl.png", (0, 0), "yuri/1br.png")
+image yuri 1bd = im.Composite((960, 960), (0, 0), "yuri/d.png", (0, 0), "yuri/1bl.png", (0, 0), "yuri/1br.png")
 image yuri 1be:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1be/yuri_1be_000.png"
     pause 0.01666
@@ -11941,9 +11957,9 @@ image yuri 1bj:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1bj/yuri_1bj_010.png"
     pause 5
     repeat
-image yuri 1bk = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/k.png", (0, 0), "mod_assets/images/yuri/1bl.png", (0, 0), "mod_assets/images/yuri/1br.png")
-image yuri 1bl = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/l.png", (0, 0), "mod_assets/images/yuri/1bl.png", (0, 0), "mod_assets/images/yuri/1br.png")
-image yuri 1bm = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/m.png", (0, 0), "mod_assets/images/yuri/1bl.png", (0, 0), "mod_assets/images/yuri/1br.png")
+image yuri 1bk = im.Composite((960, 960), (0, 0), "yuri/k.png", (0, 0), "yuri/1bl.png", (0, 0), "yuri/1br.png")
+image yuri 1bl = im.Composite((960, 960), (0, 0), "yuri/l.png", (0, 0), "yuri/1bl.png", (0, 0), "yuri/1br.png")
+image yuri 1bm = im.Composite((960, 960), (0, 0), "yuri/m.png", (0, 0), "yuri/1bl.png", (0, 0), "yuri/1br.png")
 image yuri 1bn:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1bn/yuri_1bn_000.png"
     pause 0.01666
@@ -12160,7 +12176,7 @@ image yuri 1bv:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1bv/yuri_1bv_010.png"
     pause 5
     repeat
-image yuri 1bw = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/w.png", (0, 0), "mod_assets/images/yuri/1bl.png", (0, 0), "mod_assets/images/yuri/1br.png")
+image yuri 1bw = im.Composite((960, 960), (0, 0), "yuri/w.png", (0, 0), "yuri/1bl.png", (0, 0), "yuri/1br.png")
 
 image yuri 2ba:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2ba/yuri_2ba_000.png"
@@ -12210,8 +12226,8 @@ image yuri 2bb:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2bb/yuri_2bb_010.png"
     pause 5
     repeat
-image yuri 2bc = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/c.png", (0, 0), "mod_assets/images/yuri/1bl.png", (0, 0), "mod_assets/images/yuri/2br.png")
-image yuri 2bd = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/d.png", (0, 0), "mod_assets/images/yuri/1bl.png", (0, 0), "mod_assets/images/yuri/2br.png")
+image yuri 2bc = im.Composite((960, 960), (0, 0), "yuri/c.png", (0, 0), "yuri/1bl.png", (0, 0), "yuri/2br.png")
+image yuri 2bd = im.Composite((960, 960), (0, 0), "yuri/d.png", (0, 0), "yuri/1bl.png", (0, 0), "yuri/2br.png")
 image yuri 2be:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2be/yuri_2be_000.png"
     pause 0.01666
@@ -12356,9 +12372,9 @@ image yuri 2bj:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2bj/yuri_2bj_010.png"
     pause 5
     repeat
-image yuri 2bk = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/k.png", (0, 0), "mod_assets/images/yuri/1bl.png", (0, 0), "mod_assets/images/yuri/2br.png")
-image yuri 2bl = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/l.png", (0, 0), "mod_assets/images/yuri/1bl.png", (0, 0), "mod_assets/images/yuri/2br.png")
-image yuri 2bm = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/m.png", (0, 0), "mod_assets/images/yuri/1bl.png", (0, 0), "mod_assets/images/yuri/2br.png")
+image yuri 2bk = im.Composite((960, 960), (0, 0), "yuri/k.png", (0, 0), "yuri/1bl.png", (0, 0), "yuri/2br.png")
+image yuri 2bl = im.Composite((960, 960), (0, 0), "yuri/l.png", (0, 0), "yuri/1bl.png", (0, 0), "yuri/2br.png")
+image yuri 2bm = im.Composite((960, 960), (0, 0), "yuri/m.png", (0, 0), "yuri/1bl.png", (0, 0), "yuri/2br.png")
 image yuri 2bn:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2bn/yuri_2bn_000.png"
     pause 0.01666
@@ -12575,7 +12591,7 @@ image yuri 2bv:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2bv/yuri_2bv_010.png"
     pause 5
     repeat
-image yuri 2bw = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/w.png", (0, 0), "mod_assets/images/yuri/1bl.png", (0, 0), "mod_assets/images/yuri/2br.png")
+image yuri 2bw = im.Composite((960, 960), (0, 0), "yuri/w.png", (0, 0), "yuri/1bl.png", (0, 0), "yuri/2br.png")
 
 image yuri 3ba:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_3ba/yuri_3ba_000.png"
@@ -12625,8 +12641,8 @@ image yuri 3bb:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_3bb/yuri_3bb_010.png"
     pause 5
     repeat
-image yuri 3bc = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/c.png", (0, 0), "mod_assets/images/yuri/2bl.png", (0, 0), "mod_assets/images/yuri/2br.png")
-image yuri 3bd = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/d.png", (0, 0), "mod_assets/images/yuri/2bl.png", (0, 0), "mod_assets/images/yuri/2br.png")
+image yuri 3bc = im.Composite((960, 960), (0, 0), "yuri/c.png", (0, 0), "yuri/2bl.png", (0, 0), "yuri/2br.png")
+image yuri 3bd = im.Composite((960, 960), (0, 0), "yuri/d.png", (0, 0), "yuri/2bl.png", (0, 0), "yuri/2br.png")
 image yuri 3be:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_3be/yuri_3be_000.png"
     pause 0.01666
@@ -12771,9 +12787,9 @@ image yuri 3bj:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_3bj/yuri_3bj_010.png"
     pause 5
     repeat
-image yuri 3bk = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/k.png", (0, 0), "mod_assets/images/yuri/2bl.png", (0, 0), "mod_assets/images/yuri/2br.png")
-image yuri 3bl = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/l.png", (0, 0), "mod_assets/images/yuri/2bl.png", (0, 0), "mod_assets/images/yuri/2br.png")
-image yuri 3bm = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/m.png", (0, 0), "mod_assets/images/yuri/2bl.png", (0, 0), "mod_assets/images/yuri/2br.png")
+image yuri 3bk = im.Composite((960, 960), (0, 0), "yuri/k.png", (0, 0), "yuri/2bl.png", (0, 0), "yuri/2br.png")
+image yuri 3bl = im.Composite((960, 960), (0, 0), "yuri/l.png", (0, 0), "yuri/2bl.png", (0, 0), "yuri/2br.png")
+image yuri 3bm = im.Composite((960, 960), (0, 0), "yuri/m.png", (0, 0), "yuri/2bl.png", (0, 0), "yuri/2br.png")
 image yuri 3bn:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_3bn/yuri_3bn_000.png"
     pause 0.01666
@@ -12990,7 +13006,7 @@ image yuri 3bv:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_3bv/yuri_3bv_010.png"
     pause 5
     repeat
-image yuri 3bw = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/w.png", (0, 0), "mod_assets/images/yuri/2bl.png", (0, 0), "mod_assets/images/yuri/2br.png")
+image yuri 3bw = im.Composite((960, 960), (0, 0), "yuri/w.png", (0, 0), "yuri/2bl.png", (0, 0), "yuri/2br.png")
 
 image yuri 4ba:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_4ba/yuri_4ba_000.png"
@@ -13040,7 +13056,7 @@ image yuri 4bb:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_4bb/yuri_4bb_010.png"
     pause 5
     repeat
-image yuri 4bc = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/c2.png", (0, 0), "mod_assets/images/yuri/3b.png")
+image yuri 4bc = im.Composite((960, 960), (0, 0), "yuri/c2.png", (0, 0), "yuri/3b.png")
 image yuri 4bd:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_4bd/yuri_4bd_000.png"
     pause 0.01666
@@ -13065,7 +13081,7 @@ image yuri 4bd:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_4bd/yuri_4bd_010.png"
     pause 5
     repeat
-image yuri 4be = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/e2.png", (0, 0), "mod_assets/images/yuri/3b.png")
+image yuri 4be = im.Composite((960, 960), (0, 0), "yuri/e2.png", (0, 0), "yuri/3b.png")
 
 #Hospital gown
 image yuri 1ha:
@@ -13116,8 +13132,8 @@ image yuri 1hb:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1hb/yuri_1hb_010.png"
     pause 5
     repeat
-image yuri 1hc = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/c.png", (0, 0), "mod_assets/images/yuri/1hl.png", (0, 0), "mod_assets/images/yuri/1hr.png")
-image yuri 1hd = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/d.png", (0, 0), "mod_assets/images/yuri/1hl.png", (0, 0), "mod_assets/images/yuri/1hr.png")
+image yuri 1hc = im.Composite((960, 960), (0, 0), "yuri/c.png", (0, 0), "yuri/1hl.png", (0, 0), "yuri/1hr.png")
+image yuri 1hd = im.Composite((960, 960), (0, 0), "yuri/d.png", (0, 0), "yuri/1hl.png", (0, 0), "yuri/1hr.png")
 image yuri 1he:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1he/yuri_1he_000.png"
     pause 0.01666
@@ -13262,9 +13278,9 @@ image yuri 1hj:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1hj/yuri_1hj_010.png"
     pause 5
     repeat
-image yuri 1hk = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/k.png", (0, 0), "mod_assets/images/yuri/1hl.png", (0, 0), "mod_assets/images/yuri/1hr.png")
-image yuri 1hl = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/l.png", (0, 0), "mod_assets/images/yuri/1hl.png", (0, 0), "mod_assets/images/yuri/1hr.png")
-image yuri 1hm = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/m.png", (0, 0), "mod_assets/images/yuri/1hl.png", (0, 0), "mod_assets/images/yuri/1hr.png")
+image yuri 1hk = im.Composite((960, 960), (0, 0), "yuri/k.png", (0, 0), "yuri/1hl.png", (0, 0), "yuri/1hr.png")
+image yuri 1hl = im.Composite((960, 960), (0, 0), "yuri/l.png", (0, 0), "yuri/1hl.png", (0, 0), "yuri/1hr.png")
+image yuri 1hm = im.Composite((960, 960), (0, 0), "yuri/m.png", (0, 0), "yuri/1hl.png", (0, 0), "yuri/1hr.png")
 image yuri 1hn:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1hn/yuri_1hn_000.png"
     pause 0.01666
@@ -13481,7 +13497,7 @@ image yuri 1hv:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_1hv/yuri_1hv_010.png"
     pause 5
     repeat
-image yuri 1hw = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/w.png", (0, 0), "mod_assets/images/yuri/1hl.png", (0, 0), "mod_assets/images/yuri/1hr.png")
+image yuri 1hw = im.Composite((960, 960), (0, 0), "yuri/w.png", (0, 0), "yuri/1hl.png", (0, 0), "yuri/1hr.png")
 
 image yuri 2ha:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2ha/yuri_2ha_000.png"
@@ -13531,8 +13547,8 @@ image yuri 2hb:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2hb/yuri_2hb_010.png"
     pause 5
     repeat
-image yuri 2hc = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/c.png", (0, 0), "mod_assets/images/yuri/2hl.png", (0, 0), "mod_assets/images/yuri/2hr.png")
-image yuri 2hd = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/d.png", (0, 0), "mod_assets/images/yuri/2hl.png", (0, 0), "mod_assets/images/yuri/2hr.png")
+image yuri 2hc = im.Composite((960, 960), (0, 0), "yuri/c.png", (0, 0), "yuri/2hl.png", (0, 0), "yuri/2hr.png")
+image yuri 2hd = im.Composite((960, 960), (0, 0), "yuri/d.png", (0, 0), "yuri/2hl.png", (0, 0), "yuri/2hr.png")
 image yuri 2he:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2he/yuri_2he_000.png"
     pause 0.01666
@@ -13677,9 +13693,9 @@ image yuri 2hj:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2hj/yuri_2hj_010.png"
     pause 5
     repeat
-image yuri 2hk = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/k.png", (0, 0), "mod_assets/images/yuri/2hl.png", (0, 0), "mod_assets/images/yuri/2hr.png")
-image yuri 2hl = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/l.png", (0, 0), "mod_assets/images/yuri/2hl.png", (0, 0), "mod_assets/images/yuri/2hr.png")
-image yuri 2hm = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/m.png", (0, 0), "mod_assets/images/yuri/2hl.png", (0, 0), "mod_assets/images/yuri/2hr.png")
+image yuri 2hk = im.Composite((960, 960), (0, 0), "yuri/k.png", (0, 0), "yuri/2hl.png", (0, 0), "yuri/2hr.png")
+image yuri 2hl = im.Composite((960, 960), (0, 0), "yuri/l.png", (0, 0), "yuri/2hl.png", (0, 0), "yuri/2hr.png")
+image yuri 2hm = im.Composite((960, 960), (0, 0), "yuri/m.png", (0, 0), "yuri/2hl.png", (0, 0), "yuri/2hr.png")
 image yuri 2hn:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2hn/yuri_2hn_000.png"
     pause 0.01666
@@ -13896,7 +13912,7 @@ image yuri 2hv:
     "mod_assets/images/yuri/Live2D/Final Products/yuri_2hv/yuri_2hv_010.png"
     pause 5
     repeat
-image yuri 2hw = im.Composite((960, 960), (0, 0), "mod_assets/images/yuri/w.png", (0, 0), "mod_assets/images/yuri/2hl.png", (0, 0), "mod_assets/images/yuri/2hr.png")
+image yuri 2hw = im.Composite((960, 960), (0, 0), "yuri/w.png", (0, 0), "yuri/2hl.png", (0, 0), "yuri/2hr.png")
 
 
 
@@ -13945,7 +13961,7 @@ image yuri stab_6_eyes:
         linear 10 yoffset -15
 
 
-image yuri oneeye = LiveComposite((960, 960), (0, 0), "mod_assets/images/yuri/1l.png", (0, 0), "mod_assets/images/yuri/1r.png", (0, 0), "yuri/oneeye.png", (0, 0), "yuri oneeye2")
+image yuri oneeye = LiveComposite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/oneeye.png", (0, 0), "yuri oneeye2")
 image yuri oneeye2:
     "yuri/oneeye2.png"
     subpixel True
@@ -13983,7 +13999,7 @@ image yuripupils:
     "yuri/eyes2.png"
     yuripupils_move
 
-image yuri cuts = "mod_assets/images/yuri/cuts.png"
+image yuri cuts = "yuri/cuts.png"
 
 image yuri dragon:
     "yuri 3"
