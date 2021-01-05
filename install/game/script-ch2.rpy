@@ -6,7 +6,32 @@ mc "That nightmare..."
 "I look at my hands, still shaking."
 "I clench them tightly, trying to calm down."
 mc "I am in control... I am in control."
-
+scene bg residential_day
+    with dissolve_scene_half
+    play music t2
+    "I'm standing outside of my house, waiting for Sayori to show up."
+    "She's taking a little too long to show up."
+    "Maybe, I should go check on her."
+    s "Heeeey!"
+    "Ahh, here she comes now."
+    show sayori 4p at t11 zorder 2
+    s "Ohh, I slept in late again..."
+    mc "It's okay Sayori. We won't be late if we leave now."
+    s 2q "Great!"
+    "I notice that Sayori has a bandage wrapped around her finger."
+    mc "Hey, what happened to your finger?"
+    s 2l "Oh, I cut it on some paper this morning. I'm so clumsy..."
+    s "Hey, could you do me a favor?"
+    mc "Hmm? What is it?"
+    s 2k "The bandage isn't really that tight, so... could you hold my finger on the way to school?"
+    s 1a "You know, that way it won't slip off."
+    "I could easily point out how Sayori could just use her other hand to hold her finger, but..."
+    mc "Okay Sayori, I'll hold your finger for you."
+    s 4m "You will!?"
+    mc "Yeah, I will."
+    s 2y "..."
+    "We start making our way to school, Sayori's little finger tightly clutched in my hand."
+    call endgame
 
 label ch2_main:
     scene bg club_day
