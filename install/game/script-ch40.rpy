@@ -130,7 +130,7 @@ label ch40_main:
     #Sayori small smile maybe? 
     s "Uhuh..."
     "I give Sayori a smile before I leave for class."
-    
+    #MC's words aren't actually getting to her here. She might fake a small, but his words are actually confusing her. She doesn't get why he's putting so much importance on her all of a sudden.
     scene bg class_day with wipeleft_scene
     play music m1
     "Another ordinary day of school, I guess."
@@ -389,7 +389,7 @@ label ch40_main:
     
     return
     #Top Priority: See if this code ever gets used or if it's just leftover
-    
+    #This code shouldn't get used. Sorry for leaving in a bunch of leftover code. Sometimes I look at it to make sure the story and characters are going in a way I want them to while still being in character. Also helps if I need to reference anything from the base game.
     $ if all(clear for clear in persistent.clear): persistent.clearall = True
     if persistent.clearall:
         call ch40_clearall
