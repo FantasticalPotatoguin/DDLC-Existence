@@ -49,9 +49,14 @@ scene bg residential_day
     s "Maybe it's selfish of me to say this, but... I want everyday to be a great day."
     s "All of my friends deserve that."
     s "You're all such wonderful people."
+    "Sayori..."
     "..."
     #Cue to MC opening his eyes (or something like that), and Dreams of Love and Literature playing.
-    
+    "I can't give up. Not now."
+    "If I did, I'd just be betraying Sayori and her wishes."
+    "I can't do that."
+    "Code or not, we're all people. We all want to be happy. And... I want to see that happiness come true."
+    "So... I won't quit."
 
 label ch2_main:
     scene bg club_day
