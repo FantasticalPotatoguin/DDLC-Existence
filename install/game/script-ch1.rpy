@@ -51,7 +51,8 @@ label ch1_main:
     show natsuki 5y zorder 2 at f22
     n "Uh huh, sure it isn't."
     n 5h "Look, you better take this club seriously."
-    n 5f "If you think you can just come in and make sweet talk to us all day, then you've got another thing coming."
+    n 5f "If you think you can just come in and make sweet talk to us all day, then you've got another think coming."
+    #Think works here. No need to change it.
     show natsuki zorder 2 at t22
     #Natsuki close mouth
     mc "Natsuki, seriously, it's not like that."
