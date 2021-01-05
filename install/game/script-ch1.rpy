@@ -103,6 +103,7 @@ label ch1_main:
     mc "S-Sayori--"
     show sayori zorder 3 at f31
     #Sayori sadder
+    #I don't think Sayori should visibly look sad here. She is actively trying to set them up together, like in the base game.
     s "Hmm?"
     show sayori zorder 2 at t31
     mc "..."
@@ -275,14 +276,14 @@ label ch1_main:
     "I can already see Monika's pristine handwriting from where I sit."
     "Natsuki and Yuri reluctantly comply as well, reaching into their bags."
     "I do the same, myself, and give it a look over."
-    
+    #I would like for MC's poem to show up as an actual poem, probably in the same font as Sayori's.
     "{i}Looking vacantly, never really seeing them, taking for granted.{/i}"
     
     "It took me a long time to even write this much."
     "I tried a lot of different styles, but eventually I settled on haiku."
     "I thought it would be easier than something like a sonnet, but it was still hard."
     "At least it's done. Now I just hope it's good."
-
+#I'm not sure how to get the poem choosing to work without actually playing the poem minigame. This works for now, but I would like to be able to choose them in any order.
     show sayori 1b at t11 zorder 2
     s 1b "..."
     s 1f "[player]..."
@@ -1096,7 +1097,7 @@ label ch1_end_yuri:
     mc "Make enough for more than one person, okay?"
     y "Y-Yeah."
     return
-
+#Only this one is important. The other branches could probably be deleted.
 label ch1_end_sayori:
     $ ch1_choice = "sayori"
     "Neither Yuri nor Natsuki seem to have noticed my internal crisis."
