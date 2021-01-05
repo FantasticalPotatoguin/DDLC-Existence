@@ -31,7 +31,27 @@ scene bg residential_day
     mc "Yeah, I will."
     s 2y "..."
     "We start making our way to school, Sayori's little finger tightly clutched in my hand."
+    "..."
+    #transition to a blank screen here
+    "Maybe things won't change. Maybe disaster is all that awaits us."
+    "Maybe Monika was right..."
+    "This moment right now feels good, but... surely it won't last."
     call endgame
+    "I could just ask Monika to delete everything at a random point in time. Give everyone a happy moment before we all blissfully stop, unaware of anything wrong."
+    "Forever..."
+    "I guess that's all we could ever hope for. I wonder if even the player would be happy with that? I'm not sure what other outcome they could have ever been hoping for."
+    "We all are just code after all. There was never any hope for us to find a happy ending..."
+    "..."
+    s "Hey, [player]?"
+    mc "Hmm?"
+    s "Well... I just wanted to say that I'm really happy you decided to join the literature club."
+    s "It's been great seeing you so much lately, and the club has felt a lot more lively too."
+    s "Maybe it's selfish of me to say this, but... I want everyday to be a great day."
+    s "All of my friends deserve that."
+    s "You're all such wonderful people."
+    "..."
+    #Cue to MC opening his eyes (or something like that), and Dreams of Love and Literature playing.
+    
 
 label ch2_main:
     scene bg club_day
