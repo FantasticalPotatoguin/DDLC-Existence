@@ -57,7 +57,34 @@ scene bg residential_day
     "I can't do that."
     "Code or not, we're all people. We all want to be happy. And... I want to see that happiness come true."
     "So... I won't quit."
-
+    
+    #Show a transition effect to show that some time has passed. MC is now eating lunch. Yuri is not on screen until she starts talking.
+    "What to say to Monika... What to say, what to say..."
+    "Can I even say anything to her? I need to see this through, but... I'm just so upset at her still."
+    "I still can't come up with a good argument either..."
+    "Nor do I have a good poem yet..."
+    "God I suck at this."
+    y "Umm, are you okay over there? Something seems to be concerning you."
+    mc "Huh? Oh, sorry about that Yuri. I was just deep in thought."
+    y "Hehe. I hope I haven't rubbed off on you too much."
+    mc "Ha, not like that would be a bad thing."
+    y "..."
+    y "May I ask what's troubling you?"
+    mc "Well..."
+    "Yuri's help would be great, but I also don't want her knowing about all of this."
+    "How should I go about doing this?"
+    mc "I'm doing this project for class. We have to debate a certain standpoint."
+    y "Oh? And what are you debating for or against?"
+    mc "Well, if it ever turned out that life was just some kind of video game, I need to prove that life would still be worth living. That there even is a life to live at all."
+    y "Ah, so it's like the simulation theory then."
+    mc "Umm, I suppose."
+    y "What do you have so far?"
+    mc "Well, I was trying to prove that the people in said game are just as real as people outside of the game, but my opponent brought up the Asian room theory. I can't come up with a good rebuttal."
+    y "Hehe I think you mean Chinese room theory. It states that a machine can't be proven to have a consciousness of its own."
+    mc "Err, right, that one."
+    
+    
+#I'm not sure if this label is needed here. Needs to be double checked.
 label ch2_main:
     scene bg club_day
     with dissolve_scene_half
