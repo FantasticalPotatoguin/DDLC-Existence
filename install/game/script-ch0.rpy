@@ -71,7 +71,7 @@ label ch0_main:
     show yuri 3l at t11 zorder 2
     y "..."
     y 3t "..."
-    mc "I can read your's first if you want Yuri." 
+    mc "I can read yours first if you want Yuri." 
     mc "I’m sure you're anxious to see how I’ll react to it, so I’d rather calm your nerves quickly instead of having you wait."
     y 4 "Err, yes, thank you." 
     y "Do give me some honest feedback. It’s my first time sharing my poetry with all of you after all, so I’d like to see if it’s any good." 
@@ -112,7 +112,7 @@ label ch0_main:
 
     $ currentPos = get_pos()
     play music '<from ' + str(currentPos) + ' loop 4.444>bgm/5_yuri.ogg'
-    y "Th, Thank you for the honest feedback…"
+    y "Th-Thank you for the honest feedback…"
     y "I’m sorry, but I think I need to be alone for a bit to, think about what you’ve said."
     show yuri zorder 1 at thide
     hide yuri
@@ -305,6 +305,7 @@ label ch0_main:
     mc "I'm really worried."
     scene black with dissolve_cg
     play music t9
+    #It would be great if we could use a different background to more easily show the passage of time.
     scene bg house with wipeleft
     "I must have sat by her door for hours, just waiting and waiting." 
     "I kept hoping she would open her door, and I kept looking at my phone awaiting any sort of message from her." 
@@ -334,10 +335,10 @@ label ch0_main:
         "..."
         
         "Go To Bed.":
-            "Defeated, I headed home."
+            "Defeated, I head home."
             
     scene bg bedroom with wipeleft
-    "I fell onto my bed, hoping for this day to just end, and for the sweet embrace of sleep to greet me." 
+    "I fall onto my bed, hoping for this day to just end, and for the sweet embrace of sleep to greet me." 
     "A nice, dreamless sleep full of sweet nothings."
     
     
