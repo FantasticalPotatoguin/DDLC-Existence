@@ -86,13 +86,13 @@ label ch5_main:
     with dissolve_scene_full
     #add music to this scene? 
 
-    "Eventually I woke up. I don’t think I slept well, but I’m not sure." 
+    "Eventually I wake up. I don’t think I slept well, but I’m not sure." 
     "I hadn’t set my alarm, so I woke up later than I normally would."
     scene bg kitchen with wipeleft_scene
-    "I didn’t care. I grabbed a quick breakfast, and walked outside. I was still wearing my clothes from yesterday."
+    "I don't care. I grab a quick breakfast, and walk outside. I'm still wearing my clothes from yesterday."
     scene bg residential_day with wipeleft_scene
-    "I waited for Sayori, but she never came to greet me. I hoped that she had gone to school already, without me." 
-    "Unfortunately, I didn’t have the luxury of waiting there forever, and had to make my way to school as well."
+    "I wait for Sayori, but she never comes to greet me. I hope that she's gone to school already, without me..." 
+    "Unfortunately, I don't have the luxury of waiting there forever, and have to make my way to school as well."
 
     scene bg corridor with wipeleft_scene
     show monika 2b zorder 2 at t11
@@ -108,8 +108,8 @@ label ch5_main:
     m 2g "It's not your fault."
     show monika 2h zorder 1 at thide
     hide monika 
-    "Something about what Monika said sent a shiver down my spine. A terror that I couldn’t quite explain started to grip me." 
-    "I pulled out my phone to try and get ahold of Sayori, to make sure that she was okay." 
+    "Something about what Monika said sends a shiver down my spine. A terror that I can't quite explain starts to grip me." 
+    "I pull out my phone to try and get ahold of Sayori, to make sure that she's okay." 
     "A simple text should do it." 
     "Wait... what the hell is this?" 
     "The last message I had sent her…"
@@ -118,28 +118,28 @@ label ch5_main:
     "That... that's not what I sent."
     "What the hell?!"
     mc "Monika, I... I have to go. Right now!"
-    m "Okay, but don't strain yourself~"
+    m "..."
     scene bg corridor with wipeleft
     scene bg residential_day with wipeleft
     scene bg house with wipeleft
-    "I ran as fast as I could to Sayori's house."
+    "I run as fast as I can to Sayori's house."
     mc "Sayori, open up, please!"
-    "I banged, and banged, and banged on her door, desperate to get in."
+    "I bang, and bang, and bang on her door, desperate to get in."
     "All rational thought was starting to leave me."
     #Knocking sound effect? 
     "I banged on the door so hard, my hands were starting to feel broken."
     mc "I need to change tactics."
-    "I picked up the biggest rock I could find nearby."
-    "I was getting in, even if I had to break through a window."
-    "Thankfully, my eyes caught a glare beneath me."
-    "As luck would have it, there was a spare key under that rock." 
+    "I pick up the biggest rock I can find nearby."
+    "I'm getting in, even if I have to break through a window."
+    "Thankfully, my eyes catch a glare beneath me."
+    "As luck would have it, there's a spare key under that rock." 
     #Door opening sound effect?
-    "I frantically unlocked the door, and stumbled inside."
+    "I frantically unlock the door, and stumble inside."
     scene black with wipeleft
     "No sign of her."
-    "I hurried to her room." 
-    "This was starting to feel like an invasion of privacy, but I couldn’t care at the moment." 
-    "I had to make sure she was okay. I had to." 
+    "I hurry to her room." 
+    "This was starting to feel like an invasion of privacy, but I can't bring myself to care right now." 
+    "I have to make sure she's okay. I have to." 
     "Her door… I gently… No!" 
     "I kick the door down, with all of my might."
     mc "{cps=30}.......Sayo--{/cps}{nw}"
@@ -224,7 +224,7 @@ label ch5_main:
     hide fake_exception
     hide fake_exception2
     hide exception_bg
-    "This couldn’t be real…"
+    "This can't be real…"
     "No, I refuse to accept this…"
     "She can’t be…"
     "I was going to make things right."
