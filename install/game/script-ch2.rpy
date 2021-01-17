@@ -36,11 +36,11 @@ scene bg residential_day
     "Maybe things won't change. Maybe disaster is all that awaits us."
     "Maybe Monika was right..."
     "This moment right now feels good, but... surely it won't last."
-    call endgame
     "I could just ask Monika to delete everything at a random point in time. Give everyone a happy moment before we all blissfully stop, unaware of anything wrong."
     "Forever..."
     "I guess that's all we could ever hope for. I wonder if even the player would be happy with that? I'm not sure what other outcome they could have ever been hoping for."
     "We all are just code after all. There was never any hope for us to find a happy ending..."
+    call endgame
     "..."
     s "Hey, [player]?"
     mc "Hmm?"
@@ -66,7 +66,7 @@ scene bg residential_day
     "God I suck at this."
     y "Umm, are you okay over there? Something seems to be concerning you."
     mc "Huh? Oh, sorry about that Yuri. I was just deep in thought."
-    y "Hehe. I hope I haven't rubbed off on you too much."
+    y "I hope I haven't rubbed off on you too much..."
     mc "Ha, not like that would be a bad thing."
     y "..."
     y "May I ask what's troubling you?"
@@ -79,8 +79,9 @@ scene bg residential_day
     y "Ah, so it's like the simulation theory then."
     mc "Umm, I suppose."
     y "What do you have so far?"
-    mc "Well, I was trying to prove that the people in said game are just as real as people outside of the game, but my opponent brought up the Asian room theory. I can't come up with a good rebuttal."
-    y "Hehe I think you mean Chinese room theory. It states that a machine can't be proven to have a consciousness of its own."
+    mc "Well, I was practicing with my opponent and trying to prove that the people in said game are just as real as people outside of the game."
+    mc "My opponent brought up the Asian room theory though, and I can't come up with a good rebuttal."
+    y "Hehe~ I think you mean Chinese room theory. It states that a machine can't be proven to have a consciousness of its own."
     mc "Err, right, that one."
     
     
