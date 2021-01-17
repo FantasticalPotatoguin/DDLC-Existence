@@ -90,13 +90,11 @@ label ch2_main:
     scene bg club_day
     with dissolve_scene_half
     play music t2
-    "Another day passes, and it's time for the club meeting already."
-    "I've gotten a little more comfortable here over the past couple days."
     "Entering the clubroom, the usual scene greets me."
     show sayori 2x zorder 2 at t11
     s "Hi [player]~"
     mc "Yo, Sayori."
-    mc "Looks like you're in a good mood today."
+    mc "Looks like you're still in a good mood."
     s 1q "Ehehe~"
     s "I'm just still not used to you being in the club, that's all."
     mc "I see..."
@@ -105,51 +103,21 @@ label ch2_main:
     s 1d "Speaking of which..."
     s "I'm kinda hungry..."
     s "Will you come with me to buy a snack?"
-    mc "No thanks."
-    s 4h "Eh??"
-    s "T-That's not like you at all!!"
-    mc "I have my reasons."
-    mc "Why don't we take a look at your purse, Sayori?"
-    s 4l "E-Eh?"
+    mc "Sure."
+    s "Yay!"
+    mc "I've got some spare money too, so I can probably pay for yours as well."
+    s "R-Really?!"
+    mc "What? It's not that big of a deal."
+    s 4l "..."
     show sayori at s11
-    s "Why that...all of a sudden?"
-    mc "No reason, really."
-    mc "I just wanted to look at it."
-    s 1l "A-Ah..."
-    show sayori zorder 2 at t11
-    "Sayori nervously retrieves her coin purse."
-    "She fumbles with the latch and gets it open."
-    "Then, she turns it upside-down and lets its contents spill onto the desk."
-    "Only two small coins fall out."
-    s 5a "A-Ahaha..."
-    mc "I knew it..."
-    mc "I can see right through you, Sayori."
-    s 5c "That's not fair!"
-    s "How did you even know?"
-    mc "It's simple."
-    mc "If you had enough money in the first place, you would have bought a snack before coming to the clubroom."
-    mc "So, either you're not hungry and wanted an excuse to take a walk..."
-    mc "Or, you planned to conveniently forget that you spent all your money, so that I would lend you some!"
-    mc "But there's one more thing..."
-    mc "...You're always hungry!"
-    mc "And so, that only leaves the one option!"
-    s 4p "Uwaaa~!"
-    s "I give up!"
-    s "Don't make me feel guiltyyy!"
-    mc "If you feel guilty, that means you deserve to feel guilty..."
-    show yuri 1c zorder 2 at t33
-    y "Ahaha."
-    "Yuri suddenly giggles."
-    show sayori 4g
-    mc "Eh?"
-    "I didn't notice that she was listening in."
-    "Her face is in her book, as always."
-    show yuri 3n at h33
-    y "A-Ah!"
-    y "I wasn't listening or anything--!"
-    y 3o "It was just...something in my book..."
-    show sayori zorder 3 at f32
-    s 1h "Yuriiii..."
+    s "It's just... you aren't always so generous."
+    mc "Guess I'm just in a generous mood."
+    mc "Really Sayori, it's no big deal at all."
+    s 1l "Okay..."
+    #Cut to the hallway.
+    "I decided to just get some grape juice for myself. I was more thirsty than hungry."
+    "Sayori is still trying to decide on what to eat."
+    
     s "Tell [player] to let me borrow some money..."
     show sayori zorder 2 at t32
     show yuri zorder 3 at f33
