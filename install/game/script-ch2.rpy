@@ -83,6 +83,22 @@ scene bg residential_day
     mc "My opponent brought up the Asian room theory though, and I can't come up with a good rebuttal."
     y "Hehe~ I think you mean Chinese room theory. It states that a machine can't be proven to have a consciousness of its own."
     mc "Err, right, that one."
+    y "Hmm..."
+    y "What class is this for?"
+    mc "Umm, philosophy. Yeah, that class."
+    "Does this school even have a philosophy class?"
+    y "Oh, I took that class last year!"
+    y "Though, the teacher never made us do a debate."
+    mc "It sounds like something new they're trying out."
+    y "..."
+    "Why am I so bad at lying?"
+    y "Well, I can help you out, if you'd like."
+    mc "Really? Thank you so much Yuri. Maybe now I'll actually be able to stand a chance."
+    y "I'm not sure if my help will really be that good."
+    mc "Are you kidding? C'mon Yuri, you're one of the smartest people I know. With your help, I'll do great."
+    #Show Yuri blushing.
+    y "..."
+    "Maybe now I'll actually stand a chance against Monika."
     
     
 #I'm not sure if this label is needed here. Needs to be double checked.
